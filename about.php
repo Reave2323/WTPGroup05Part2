@@ -47,17 +47,18 @@
 						src="images/FakeShop_logo.png"
 						width="128"
 						height="128"
-						alt="Fakeshop" />
+						alt="FakeShop Logo" />
 				</div>
 				<nav class="links">
 					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="jobs.html">Jobs With Us</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="apply.html">Apply Now</a></li>
+						<li><a href="index.php">Home</a></li>
+						<li><a href="jobs.php">Jobs With Us</a></li>
+						<li><a href="about.php">About</a></li>
+						<li><a href="apply.php">Apply Now</a></li>
 					</ul>
 				</nav>
 				<div class="nav-actions">
+					<input type="text" placeholder="Search..." />
 					<a href="#" class="search">🔍</a>
 				</div>
 			</div>
