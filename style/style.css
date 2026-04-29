@@ -1,0 +1,418 @@
+* {
+	font-family: calibri, sans-serif, Arial, Helvetica;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #f3fff3;
+}
+
+/* 
+QUICK REFERENCE FOR NAVBAR
+NAVBAR = .navbar {}
+NAV-CONTAINER = .nav-container {}
+NAV LINKS = nav.links {}
+NAV ACTIONS = .nav-actions {}
+*/
+
+/* links navigation styling */
+nav.links {
+	display: flex;
+	align-items: center;
+	/* vertically align logo + links */
+	justify-content: center;
+	/* pushes logo left, links right */
+}
+
+/* Tidies navbar */
+nav.links ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+/* Ensures navbar is inline */
+nav.links ul li {
+	display: inline;
+	margin-right: 20px;
+}
+
+/* Text Decoration for navbar */
+nav.links ul li a {
+	text-decoration: none;
+	color: #cf8f18;
+	font-weight: bold;
+}
+
+/* Sets logo size DON'T TOUCH */
+.logo img {
+	height: 80px;
+	width: 80px;
+}
+
+nav.links ul {
+	display: flex;
+	list-style: none;
+	gap: 30px;
+}
+
+nav.links li a:hover {
+	color: #ffdf11;
+	transition: 0.3s;
+}
+
+/* positions navbar */
+.navbar {
+	position: relative;
+	width: 100%;
+	height: 116px;
+	top: 0;
+	bottom: auto;
+	background: white;
+	z-index: 1000;
+	/*border-bottom: 1px solid #eee; */
+}
+
+/* Container positioning for navbar, Centers the navbar and gives background colour */
+.nav-container {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 40px;
+	background-color: #292626;
+}
+
+.nav-actions {
+	display: flex;
+	gap: 20px;
+	font-size: 20px;
+	align-items: center;
+}
+
+.nav-actions input {
+	width: 0;
+	opacity: 0;
+	padding: 0;
+	border: none;
+	transition: 0.3s ease;
+}
+
+.nav-actions:focus-within input {
+	width: 200px;
+	opacity: 1;
+	padding: 5px 10px;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+}
+/* Stops text from going to the edge of screen and falling off */
+.content-area {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.content {
+	text-align: center;
+}
+
+/* Footer Styling */
+.footer {
+	margin-top: 15px;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 40px;
+	background-color: #292626;
+}
+.footer h3 {
+	color: #cf8f18;
+}
+
+.footer p {
+	color: #cf8f18;
+}
+
+.Footer-Ack {
+	text-align: center;
+}
+
+.Application-logos {
+	gap: 20px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+.Application-logos {
+	max-width: 80px;
+	height: auto;
+	display: inline-flex;
+	vertical-align: middle;
+}
+
+/* JOBS STYLING */
+/* Styling for the overarching container for each card to keep things uniform */
+.card-container {
+	max-width: 95%;
+	margin: 50px auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 25px;
+}
+
+/* Each cards styling. Box shadow makes it easier to distinguish between cards */
+.card {
+	flex: 1;
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	transition: transform 0.3s ease-in-out;
+}
+
+/* subtle hover effect */
+.card:hover {
+	transform: scale(1.05);
+}
+
+/* settings for the images for each card */
+.card img {
+	width: 100%;
+	height: 200px;
+	border-radius: 8px;
+	object-fit: cover;
+}
+
+.card-content {
+	padding: 20px;
+}
+
+/* card content styling */
+.card-content h3 {
+	color: #026aa6;
+	font-size: 27px;
+	margin-bottom: 10px;
+}
+
+.card-content {
+	color: #333;
+	font-size: 17px;
+}
+
+/* Popup overlay */
+.popup-container {
+	margin-top: 116px;
+}
+
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.3s;
+}
+
+/* Show popup */
+.popup:target {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+/* Card */
+.popup-card {
+	width: 700px;
+	max-width: 1000px;
+	max-height: 70vh;
+	background: #fff;
+	display: flex;
+	border-radius: 8px;
+	overflow: hidden;
+	position: relative;
+}
+
+/* Close button */
+.close {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	text-decoration: none;
+	font-size: 24px;
+	color: #333;
+}
+.close:hover {
+	color: rgba(208, 33, 33, 0.771);
+}
+
+/* Image */
+.left {
+	flex: 0 0 250px;
+	/* fixed width column */
+}
+
+.left img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.left-backend {
+	flex: 0 0 250px;
+	position: relative;
+	overflow: hidden;
+}
+
+.left-backend img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-42%, -50%);
+	object-fit: contain;
+}
+
+/* Content */
+.right {
+	padding: 20px;
+	flex: 1;
+	overflow-y: auto;
+
+	display: block;
+}
+
+.right ul {
+	display: block;
+	list-style: disc;
+	margin: 10px 0;
+	padding-left: 20px;
+	line-height: 1.6;
+}
+
+.right li {
+	display: list-item;
+	margin-bottom: 8px;
+}
+
+/* Button */
+.apply-btn {
+	margin-top: 20px;
+	padding: 10px 20px;
+	background: #00a8a8;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
+
+.button-style {
+	font: bold 15px;
+	text-decoration: none;
+	background-color: #eeeeee;
+	color: #333333;
+	padding: 2px 6px 2px 6px;
+	border-top: 1px solid #cccccc;
+	border-right: 1px solid #333333;
+	border-bottom: 1px solid #333333;
+	border-left: 1px solid #cccccc;
+}
+
+.ready {
+	transform: translateY(200%);
+}
+
+.details {
+	transform: translateY(300%);
+}
+
+.not-found {
+	transform: translateY(800%);
+}
+
+aside {
+	display: block;
+	width: 20%;
+	background-color: #333333;
+	color: aliceblue;
+	padding: 15px;
+	margin-left: 25px;
+	float: right;
+	border-left: 3px solid #00a8a8;
+	margin-bottom: 1rem;
+	clear: right;
+}
+
+/* HOME STYLING */
+
+.banner {
+	position: relative;
+}
+
+.banner-text {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	transform: translate(35%, 150%);
+
+	color: white;
+	background: rgba(0, 0, 0, 0.5);
+	padding: 20px 30px;
+	border-radius: 8px;
+	text-align: center;
+}
+
+.home-table {
+	/*padding-right: 80px;*/
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	border: 1px solid black;
+}
+
+.home-table th {
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.home-table td {
+	border: 1px solid black;
+	border-radius: 3px;
+}
+.who {
+	margin-left: 160px;
+	margin-right: 160px;
+	margin-top: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #cf8f18;
+	border-radius: 20px;
+}
+.what {
+	margin-left: 160px;
+	margin-right: 160px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: rgb(225, 255, 0);
+	border-radius: 20px;
+}
+
+.why {
+	margin-left: 160px;
+	margin-right: 160px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: blue;
+	border-radius: 20px;
+}
+
+/* ABOUT STYLING */
+
+/* APPLY STYLING*/
