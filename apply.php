@@ -29,7 +29,7 @@
 	include("./includes/nav.inc");
 	?>
 	<div class="content-area">
-		<form action="http://mercury.swin.edu.au/it000000/formtest.php" method="post">
+		<form action="process_eoi.php" method="post">
 			<div class="Kbal">
 				<h1 id="JobApplication">
 					<strong>Official Employment Application</strong>
@@ -40,8 +40,8 @@
 				<fieldset>
 					<legend>Position Applied</legend>
 					<p>
-						<label for="Reference_number" class="Labeling">Job Reference Number</label>
-						<input type="text" id="Reference_number" name="Referenc Number" pattern="[0-9]{5}"
+						<label for="Reference_Number" class="Labeling">Job Reference Number</label>
+						<input type="text" id="Reference_Number" name="Reference_Number" pattern="[0-9]{5}"
 							required="required" />
 					</p>
 				</fieldset>
@@ -67,8 +67,8 @@
 						<label for="Email">Email</label>
 						<input type="text" id="Email" name="Email_address" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"
 							required />
-						<label for="PhoneNumber">Phone Number</label>
-						<input type="text" id="PhoneNumber" name="Phone_number" pattern="[0-9]{8,12}" required />
+						<label for="Phone_Number">Phone Number</label>
+						<input type="text" id="Phone_Number" name="Phone_Number" pattern="[0-9]{8,12}" required />
 					</p>
 
 					<fieldset>
@@ -152,7 +152,8 @@
 			<div class="div5">
 				<fieldset>
 					<legend>Other skills</legend>
-					<textarea placeholder="Describe your other skills" id="Other_skills" name="Other skills" rows="4"
+					<label for="Other_Skills"></label>
+					<textarea placeholder="Describe your other skills" id="Other_Skills" name="Other_Skills" rows="4"
 						cols="140"></textarea>
 				</fieldset>
 			</div>
