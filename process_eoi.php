@@ -1,4 +1,10 @@
 <?php
+require_once("settings.php");
+$conn = mysqli_connect("localhost", "root", "", "jobs_database");
+if (!$conn) {
+    die("Error: Failed to send EOI, please try again later" . mysqli_connect_error());
+}
+
 $reference_number = $_POST["Reference_Number"];
 $fname = $_POST["First_Name"];
 $lname = $_POST["Last_Name"];
