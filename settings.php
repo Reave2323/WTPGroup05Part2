@@ -1,7 +1,6 @@
 <?php
-  $host = "localhost";
-  $user = "userconn";
-  $pwd = "";
-  $sql_db = "jobs_database";
-?>
-
+//change $user later
+$host = "localhost";
+$user = "root";
+$pwd = "";
+$sql_db = "jobs_database";
