@@ -10,5 +10,6 @@ https://wtp-group5-wed-230.atlassian.net?continue=https%3A%2F%2Fwtp-group5-wed-2
 
 **Group Members**:
 Kanav
-
+Moss
+Vichetra
 &copy;Swinburne University of Technology
