@@ -12,4 +12,20 @@ https://wtp-group5-wed-230.atlassian.net?continue=https%3A%2F%2Fwtp-group5-wed-2
 Kanav
 Moss
 Vichetra
+
+**Task Assignments**
+Task 1: Moss
+
+Task 2: Vichetra
+
+Task 3: Kanav
+
+Task 4: Moss
+
+Task 5: UNASSIGNED
+
+Task 6: Everyone
+
+Task 7: Kanav
+
 &copy;Swinburne University of Technology
