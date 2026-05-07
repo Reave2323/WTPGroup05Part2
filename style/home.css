@@ -1,12 +1,14 @@
 .banner {
 	position: relative;
+	align-self: auto;
 }
 
 .banner-text {
 	position: absolute;
 	top: 0%;
 	left: 0%;
-	transform: translate(150px, 250px);
+	align-self: auto;
+	/*transform: translate(150px, 250px); */
 
 	color: white;
 	background: rgba(0, 0, 0, 0.5);

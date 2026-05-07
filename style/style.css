@@ -356,19 +356,24 @@ aside {
 	position: relative;
 }
 
+.banner {
+	position: relative;
+	align-items: center;
+}
+
 .banner-text {
 	position: absolute;
 	top: 0%;
 	left: 0%;
-	transform: translate(35%, 150%);
+	/*transform: translate(150px, 250px); */
 
 	color: white;
 	background: rgba(0, 0, 0, 0.5);
 	padding: 20px 30px;
-	border-radius: 8px;
+	border-radius: 20px;
 	text-align: center;
+	font-size: 20px;
 }
-
 .home-table {
 	/*padding-right: 80px;*/
 	margin-left: auto;
