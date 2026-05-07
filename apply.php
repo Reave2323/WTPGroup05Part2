@@ -28,8 +28,8 @@
 	<?php
 	include("./includes/nav.inc");
 	?>
-	<div class="content-area">
-		<form action="process_eoi.php" method="post">
+	<div class="content-area" style="margin-top:5px">
+		<form action=" process_eoi.php" method="post">
 			<div class="Kbal">
 				<h1 id="JobApplication">
 					<strong>Official Employment Application</strong>
@@ -154,7 +154,7 @@
 					<legend>Other skills</legend>
 					<label for="Other_Skills"></label>
 					<textarea placeholder="Describe your other skills" id="Other_Skills" name="Other_Skills" rows="4"
-						cols="140"></textarea>
+						cols="100"></textarea>
 				</fieldset>
 			</div>
 
