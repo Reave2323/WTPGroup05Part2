@@ -29,7 +29,7 @@
 	include("./includes/nav.inc");
 	?>
 	<div class="content-area" style="margin-top:5px">
-		<form action=" process_eoi.php" method="post">
+		<form action="process_eoi.php" method="post">
 			<div class="Kbal">
 				<h1 id="JobApplication">
 					<strong>Official Employment Application</strong>
@@ -65,7 +65,7 @@
 					</p>
 					<p>
 						<label for="Email">Email</label>
-						<input type="text" id="Email" name="Email_address" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"
+						<input type="text" id="Email" name="Email_Address" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"
 							required />
 						<label for="Phone_Number">Phone Number</label>
 						<input type="text" id="Phone_Number" name="Phone_Number" pattern="[0-9]{8,12}" required />

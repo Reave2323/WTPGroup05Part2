@@ -39,7 +39,7 @@
 	include("./includes/nav.inc");
 	?>
 	<section class="hero">
-		<div class="slide" style="background-image: url(/images/Hero.webp)">
+		<div class="slide" style="background-image: url(./images/Hero.webp)">
 			<div class="banner-text">
 				<h2>Looking for a new career?</h2>
 				<p>
