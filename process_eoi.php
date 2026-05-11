@@ -19,7 +19,7 @@ $skills = implode(", ", $_POST["Skills"]);
 $other_skills = isset($_POST["Other_Skills"])
     ? $_POST["Other_Skills"]
     : "";
-var_dump($_POST["Other_Skills"]);
+
 
 
 $sql = "INSERT INTO Eoi (reference_number, fname, lname, dob, email, phone, gender, addr, country_state, skills, other_skills)
