@@ -174,7 +174,7 @@
 					<legend>Other skills</legend>
 					<label for="Other_Skills"></label>
 					<textarea placeholder="Describe your other skills" id="Other_Skills" name="Other_Skills" rows="4"
-						cols="100"></textarea>
+						cols="80%"></textarea>
 				</fieldset>
 			</div>
 
