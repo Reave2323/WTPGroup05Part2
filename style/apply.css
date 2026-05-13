@@ -34,7 +34,7 @@ fieldset {
     
     
 
-}
+}   
 
 
 
@@ -45,7 +45,7 @@ form {
     grid-template-rows: auto;
     gap: 12px;
     margin: 0 auto;
-    width: min(max-content, 100%);
+    width: min(max-content, 80%);
     max-width: calc(600px - 32px);
     box-sizing: border-box;
     outline: auto;
