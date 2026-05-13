@@ -2,8 +2,6 @@
 <html lang="en">
 
 <head>
-	<?php ini_set('display_errors', 1);
-	error_reporting(E_ALL); ?>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="keywords" content="shop, buisness, fakeshop, apply, job-listing" />
@@ -35,6 +33,7 @@
 			<div class="Kbal">
 				<h1 id="JobApplication">
 					<strong>Official Employment Application</strong>
+					HELP ME
 				</h1>
 			</div>
 
