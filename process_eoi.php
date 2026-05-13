@@ -7,11 +7,11 @@ if (!$conn) {
 
 if (isset($_POST["First_Name"]) && isset($_POST["Last_Name"]) && isset($_POST["Email_Address"])) {
 
-    $reference_number = $_POST["Reference_Number"];
-    $fname = $_POST["First_Name"];
-    $lname = $_POST["Last_Name"];
+    $reference_number = htmlspecialchars(trim($_POST["Reference_Number"]));
+    $fname = htmlspecialchars(trim($_POST["First_Name"]));
+    $lname = htmlspecialchars(trim($_POST["Last_Name"]));
     $dob = $_POST["DateOfBirth"];
-    $email = $_POST["Email_Address"];
+    $email = htmlspecialchars(trim(filter_var($_POST["Email_Address"], FILTER_VALIDATE_EMAIL)));
     $phone = $_POST["Phone_Number"];
     $gender = $_POST["Gender"];
     $address = implode(", ", $_POST["Address"]);
@@ -28,11 +28,11 @@ if (isset($_POST["First_Name"]) && isset($_POST["Last_Name"]) && isset($_POST["E
     if (!mysqli_query($conn, $sql)) {
         die("Query failed: " . mysqli_error($conn));
     }
-
+    $app_id = mysqli_insert_id($conn);
     mysqli_close($conn);
 
     //Redirect to thank you message
-    header("Location: submitted.php?name=" . urlencode($fname . " " . $lname));
+    header("Location: submitted.php?name=" . urlencode($fname . " " . $lname) . "&app_id=" . $app_id);
     exit();
 } else {
     header("Location: apply.php");

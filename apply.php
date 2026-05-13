@@ -63,10 +63,11 @@
 						<input type="text" id="DateOfBirth" name="DateOfBirth" pattern="\d{2}/\d{2}/\d{4}"
 							placeholder="dd/mm/yyyy" required="required" />
 					</p>
+					<!--pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"
+							required -->
 					<p>
 						<label for="Email">Email</label>
-						<input type="text" id="Email" name="Email_Address" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"
-							required />
+						<input type="text" id="Email" name="Email_Address" />
 						<label for="Phone_Number">Phone Number</label>
 						<input type="text" id="Phone_Number" name="Phone_Number" pattern="[0-9]{8,12}" required />
 					</p>

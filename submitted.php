@@ -18,10 +18,12 @@ if (!isset($_GET["name"])) {
     exit();
 }
 $name = htmlspecialchars($_GET["name"] ?? "Applicant");
+$app_id = htmlspecialchars($_GET["app_id"] ?? "EoI_Id");
 ?>
 
 <h1>Thank you
     <?php echo $name; ?>
 </h1>
 <p>Your expression of interest has been submitted</p>
+<p>The ID for your EoI is: <?php echo $app_id; ?></p>
 <p>You may now close this page</p>
