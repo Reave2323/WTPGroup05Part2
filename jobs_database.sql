@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 06, 2026 at 12:24 PM
+-- Generation Time: May 13, 2026 at 03:18 AM
 -- Server version: 12.2.2-MariaDB
--- PHP Version: 8.5.5
+-- PHP Version: 8.5.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -38,13 +38,13 @@ CREATE TABLE IF NOT EXISTS `Eoi` (
   `email` varchar(50) NOT NULL,
   `phone` int(10) NOT NULL,
   `gender` varchar(6) NOT NULL,
-  `addr` varchar(80) NOT NULL,
+  `addr` text NOT NULL,
   `country_state` varchar(15) NOT NULL,
   `skills` varchar(100) NOT NULL,
-  `other_skills` varchar(200) DEFAULT NULL,
-  `post_date` timestamp NULL DEFAULT NULL,
+  `other_skills` text DEFAULT NULL,
+  `post_date` timestamp NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
