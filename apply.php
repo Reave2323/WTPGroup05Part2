@@ -1,7 +1,9 @@
-	<!doctype html>
+<!doctype html>
 <html lang="en">
 
 <head>
+	<?php ini_set('display_errors', 1);
+	error_reporting(E_ALL); ?>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="keywords" content="shop, buisness, fakeshop, apply, job-listing" />
@@ -50,16 +52,18 @@
 					if (!$conn) {
 						die("Connection failed:" . mysqli_connect_error());
 					}
-					$query = "SELECT reference_number, job_name FROM jobs";
+
+					$query = "SELECT reference_number, job_name FROM Jobs";
 					$result = mysqli_query($conn, $query);
-					echo '<select name=Reference_Number>';
+					echo '<select name="Reference_Number">';
 					while ($row = mysqli_fetch_assoc($result)) {
 						echo '<option value="' . htmlspecialchars($row['reference_number']) . '">'
 							. htmlspecialchars($row['job_name']) .
 							'</option>';
 					}
-					echo '</select>'
-						?>
+					echo '</select>';
+					mysqli_close($conn);
+					?>
 				</fieldset>
 			</div>
 			<div class="div2">
@@ -110,7 +114,7 @@
 						<input type="text" id="Street" name="Address[]" pattern="[a-zA-Z0-9\s.,-]{5,40}" maxlength="40"
 							required="required" />
 						<label for="Suburb/Town">Suburb/Town</label>
-						<input type="text" id="Suburb/Town" name="Address[]" pattern="[a-zA-Z0-9\s.,-]{5,40}"
+						<input type="text" id="SuburbTown" name="Address[]" pattern="[a-zA-Z0-9\s.,-]{5,40}"
 							maxlength="40" required="required" />
 					</p>
 
@@ -175,7 +179,7 @@
 				</fieldset>
 			</div>
 
-			<div class="6">
+			<div class="div6">
 				<input type="submit" value="Apply" class="apply_button" />
 				<input type="Reset" value="Reset Application" class="reset_button" />
 			</div>
