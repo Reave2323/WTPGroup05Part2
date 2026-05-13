@@ -39,11 +39,27 @@
 			<div class="div1">
 				<fieldset>
 					<legend>Position Applied</legend>
-					<p>
+					<!--<p>
 						<label for="Reference_Number" class="Labeling">Job Reference Number</label>
 						<input type="text" id="Reference_Number" name="Reference_Number" pattern="[0-9]{5}"
 							required="required" />
-					</p>
+					</p>-->
+					<?php
+					include_once("settings.php");
+					$conn = mysqli_connect($host, $user, $pwd, $sql_db);
+					if (!$conn) {
+						die("Connection failed:" . mysqli_connect_error());
+					}
+					$query = "SELECT reference_number, job_name FROM jobs";
+					$result = mysqli_query($conn, $query);
+					echo '<select name=Reference_Number>';
+					while ($row = mysqli_fetch_assoc($result)) {
+						echo '<option value="' . htmlspecialchars($row['reference_number']) . '">'
+							. htmlspecialchars($row['job_name']) .
+							'</option>';
+					}
+					echo '</select>'
+						?>
 				</fieldset>
 			</div>
 			<div class="div2">
