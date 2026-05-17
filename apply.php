@@ -33,7 +33,6 @@
 			<div class="Kbal">
 				<h1 id="JobApplication">
 					<strong>Official Employment Application</strong>
-					HELP ME
 				</h1>
 			</div>
 
