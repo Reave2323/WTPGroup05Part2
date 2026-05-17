@@ -9,29 +9,6 @@
 	<title>FakeShop Home</title>
 	<link rel="stylesheet" href="./style/style.css" />
 
-	<style>
-		.hero {
-			position: relative;
-			height: 100vh;
-			width: 100%;
-			overflow: hidden;
-			margin-top: 0;
-		}
-
-		/* EACH SLIDE */
-		.slide {
-			position: absolute;
-			inset: 0;
-			background-size: cover;
-			background-position: center;
-			opacity: 1;
-			transition: opacity 1s ease;
-		}
-
-		.content p h2 {
-			text-align: center;
-		}
-	</style>
 </head>
 
 <body>
@@ -39,7 +16,7 @@
 	include("./includes/nav.inc");
 	?>
 	<section class="hero">
-		<div class="slide" style="background-image: url(./images/Hero.webp)">
+		<div class="slide" style="background-image: url('./images/Hero.webp')">
 			<div class="banner-text">
 				<h2>Looking for a new career?</h2>
 				<p>
@@ -49,6 +26,9 @@
 			</div>
 		</div>
 	</section>
+	<!--<div class="slide"
+			style="background-image: url('http://localhost/WTP/WTPGroup05Part2/images/Hero.webp') height: 100vh; min-height: 100vh;">
+-->
 	<div class="content-area">
 		<div class="content">
 			<div class="who">

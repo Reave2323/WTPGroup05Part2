@@ -9,6 +9,10 @@ body {
 	background-color: #f3fff3;
 }
 
+html,
+body {
+	height: 100%;
+}
 /* 
 QUICK REFERENCE FOR NAVBAR
 NAVBAR = .navbar {}
@@ -352,21 +356,39 @@ aside {
 
 /* HOME STYLING */
 
-.banner {
+.hero {
 	position: relative;
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+	margin-top: 0;
 }
 
-.banner {
-	position: relative;
+.slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	display: flex;
 	align-items: center;
+	justify-content: center;
+}
+
+.content h2 {
+	text-align: center;
 }
 
 .banner-text {
-	position: absolute;
+	position: relative;
 	top: 0%;
 	left: 0%;
-	/*transform: translate(150px, 250px); */
-
+	width: fit-content;
+	margin: 0 auto;
 	color: white;
 	background: rgba(0, 0, 0, 0.5);
 	padding: 20px 30px;
@@ -374,6 +396,7 @@ aside {
 	text-align: center;
 	font-size: 20px;
 }
+
 .home-table {
 	/*padding-right: 80px;*/
 	margin-left: auto;
