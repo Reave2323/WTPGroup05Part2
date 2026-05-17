@@ -1,3 +1,26 @@
+
+<?php
+	inclue_once('settings.php');
+
+	$conn = mysqli_connect($host, $user, $pwd, $sql_db);
+
+	if(!$conn) {
+		die("Connection failed: " . mysqli_connect_error());
+	}
+
+	$search = "";
+	if(isset($_GET['search'])) {
+		$search = mysqli_real_escape_string	($conn, $_GET['search']);//quotes and dashes cannot be used to manipulate the query database.
+
+	}
+
+	$query = "SELECT reference_number, job_name FROM Jobs WHERE job_name LIKE '%$search%'";
+	$result = mysqli_query($conn, $query);
+
+?>
+
+
+
 <!doctype html>
 <html lang="en">
 
@@ -21,6 +44,14 @@
 	?>
 
 	<div class="content-area">
+
+			<!--search bar-->
+		<form method="get" action="jobs.php">
+			<input type="text" name="search" placeholder="Search for jobs..." value="<?php echo htmlspecialchars($search); ?>" />
+			<button type="submit">Search</button>
+
+		</form>
+
 		<h2><strong>Our Mission</strong></h2>
 		<p>
 			Here at FakeShop, we are committed to providing quality customer
