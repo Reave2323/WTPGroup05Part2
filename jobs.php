@@ -1,6 +1,6 @@
 
 <?php
-	inclue_once('settings.php');
+	include_once('settings.php');
 
 	$conn = mysqli_connect($host, $user, $pwd, $sql_db);
 
@@ -80,170 +80,48 @@
 		</div>
 		<!-- Fieldsets for cards-->
 		<fieldset>
-			<fieldset>
-				<legend style="font-size: 30px">
-					<strong>Back End Developement</strong>
-				</legend>
-				<div class="card-container">
-					<div class="card">
-						<img loading="lazy" src="images/BackendDev.JPG" alt="Database Engineer Image" width="200"
-							height="200" />
-						<div class="card-content">
-							<h3><strong>Back End Developer</strong></h3>
-							<h4><strong>Reference Number: 30027</strong></h4>
-							<p>
-								Help FakeShop build and maintain a strong server-side logic,
-								databases, and core functionality that keeps our online shop
-								running smoothly. You'll work behind the scenes to ensure that
-								our website, customer accounts, systems, and ordering process
-								all works properly.
-							</p>
-							<p><strong>Salary:</strong> $87,000 + Superannuation</p>
-							<a href="apply.html" class="button-style">Apply Now</a>
-							<a href="#job-popup-1" class="button-style">Details</a>
-						</div>
-					</div>
-					<div class="card">
-						<img loading="lazy" src="images/BackendDev.JPG" alt="Database Engineer Image" width="200"
-							height="200" />
-						<div class="card-content">
-							<h3><strong>Database Engineer</strong></h3>
-							<h4><strong>Reference Number: 30029</strong></h4>
-							<p>
-								Help FakeShop manage and improve the data systems that run our
-								online store, keep track of our inventory, and handle customer
-								service. In this job, you will make sure that our internal
-								systems, product data, sales records, and customer information
-								are all correct, safe, and always available.
-							</p>
-							<p><strong>Salary:</strong> $87,000 + Superannuation</p>
-							<a href="apply.html" class="button-style">Apply Now</a>
-							<a href="#job-popup-2" class="button-style">Details</a>
-						</div>
-					</div>
-					<div class="card">
-						<img loading="lazy" src="images/BackendDev.JPG" alt="Database Engineer Image" width="200"
-							height="200" />
-						<div class="card-content">
-							<h3><strong>API Developer</strong>&emsp;&emsp;</h3>
-							<h4><strong>Reference Number: 30032</strong></h4>
-							<p>
-								FakeShop is currently seeking an API Developer to assist in
-								the enhancement of our systems' internal communication. In
-								this position, you will be responsible for the development and
-								maintenance of the APIs that facilitate the connection between
-								our online store, inventory tools, payment systems, and
-								customer features.
-							</p>
-							<p><strong>Salary:</strong> $87,000 + Superannuation</p>
-							<a href="apply.html" class="button-style">Apply Now</a>
-							<a href="#job-popup-3" class="button-style">Details</a>
-						</div>
-					</div>
-				</div>
-			</fieldset>
-			<br />
-			<fieldset>
-				<legend style="font-size: 30px">
-					<strong>Front End Developement</strong>
-				</legend>
-				<div class="card-container">
-					<div class="card">
-						<img loading="lazy" src="images/FrontEnd2.webp" alt="Front End Dev Image" width="200"
-							height="200" />
-						<div class="card-content">
-							<h3><strong>User Interface Designer</strong></h3>
-							<h4><strong>Reference Number: 10015</strong></h4>
-							<p>
-								FakeShop looks for a User Interface (UI) Designer to assist in
-								the development of a modern, user-friendly, and aesthetically
-								pleasing online shopping experience. As a designer, you will
-								ensure that all elements of our website and digital tools are
-								user-friendly, visually appealing, and consistent with our
-								brand.
-							</p>
-							<p><strong>Salary:</strong> $75,000 + Superannuation</p>
-							<a href="apply.html" class="button-style">Apply Now</a>
-							<a href="#job-popup-4" class="button-style">Details</a>
-						</div>
-					</div>
-					<div class="card">
-						<img loading="lazy" src="images/FrontEnd2.webp" alt="Front End Dev Image" width="200"
-							height="200" />
-						<div class="card-content">
-							<h3><strong>Front End Developer</strong>&emsp;</h3>
-							<h4><strong>Reference Number: 10025</strong></h4>
-							<p>
-								FakeShop is now seeking a Front-End Developer to assist in the
-								development of user-friendly, modern, and seamless shopping
-								experiences for our customers. In this role, you’ll build the
-								parts of our website that shoppers see and interact with, from
-								product pages to checkout flows.
-							</p>
-							<p><strong>Salary:</strong> $75,000 + Superannuation</p>
-							<a href="apply.html" class="button-style">Apply Now</a>
-							<a href="#job-popup-5" class="button-style">Details</a>
-						</div>
-					</div>
-					<div class="card">
-						<img loading="lazy" src="images/FrontEnd2.webp" alt="Front End Dev Image" width="200"
-							height="200" />
-						<div class="card-content">
-							<h3><strong>Front End Software Engineer</strong></h3>
-							<h4><strong>Reference Number: 10025</strong></h4>
-							<p>
-								Assist FakeShop in the development of a user-friendly, modern,
-								and seamless purchasing experience for our Customers. In this
-								role, you’ll build the parts of our website that shoppers see
-								and interact with, from the product pages to checkout flows.
-							</p>
-							<p><strong>Salary:</strong> $75,000 + Superannuation</p>
-							<a href="apply.html" class="button-style">Apply Now</a>
-							<a href="#job-popup-6" class="button-style">Details</a>
-						</div>
-					</div>
-				</div>
-			</fieldset>
-			<br />
-			<fieldset>
-				<legend style="font-size: 30px">
-					<strong>Servicing Customers</strong>
-				</legend>
-				<div class="card-container">
-					<div class="card">
-						<img loading="lazy" src="images/CustomerSupport.JPG" alt="Customer Support Image" width="200"
-							height="200" />
-						<div class="card-content">
-							<h3><strong>Customer Support</strong></h3>
-							<h4><strong>Reference Number: 40098</strong></h4>
-							<p>
-								Co-operate with customers, providing product/service
-								information, answering questions, and resolving any problems
-								that the customer might face.
-							</p>
-							<p><strong>Salary:</strong> $75,000 + Superannuation</p>
-							<a href="apply.html" class="button-style">Apply Now</a>
-							<a href="#job-popup-7" class="button-style">Details</a>
-						</div>
-					</div>
-					<div class="card">
-						<img loading="lazy" src="images/CustomerSupport.JPG" alt="Customer Support Image" width="200"
-							height="200" />
-						<div class="card-content">
-							<h3><strong>Customer Support</strong></h3>
-							<h4><strong>Reference Number: 40098</strong></h4>
-							<p>
-								Co-operate with customers, providing product/service
-								information, answering questions, and resolving any problems
-								that the customer might face.
-							</p>
-							<p><strong>Salary:</strong> $75,000 + Superannuation</p>
-							<a href="apply.html" class="button-style">Apply Now</a>
-							<a href="#job-popup-7" class="button-style">Details</a>
-						</div>
-					</div>
-				</div>
-			</fieldset>
+			<?php
+				$current_category = "";
+				while ($row = mysqli_fetch_assoc($result)) {
+
+					if ($row['category'] == 'Back End Development'){
+						$image = 'BackendDev.webp';
+					} else if ($row['category'] == 'Front End Development') {
+						$image = 'FrontEnd.webp';
+					} else if ($row['category'] == 'Customer Support') {
+						$image = 'CustomerSupport.JPG';
+					} else {
+						$image = 'DefaultJobImage.jpg'; // image for Job categories
+					}
+
+
+					if ($row =['category'] != $current_category) {
+						if ($current_category != "") {
+							echo "</div></fieldset>"; // Close previous category div and fieldset
+						}
+						$current_category = $row['category'];
+						echo "<legend>" . htmlspecialchars($current_category) . "</legend>";
+						echo "<div class='card-container'>"; // Start new category div	
+					}
+					
+				
+
+					echo' <div class="card"> 
+								<img src="images/' . $image . '" alt="' . htmlspecialchars($row['job_name']) . '" width"200" height="200" />
+								<div class="card-content">
+									<h3><strong>' . htmlspecialchars($row['job_name']) . '</strong></h3>
+									<h4><strong>Reference Number: ' . $row['reference_number'] . '</strong></h4>
+									<p>' . htmlspecialchars($row['job_description']) . '</p>
+									<p><strong>Salary:</strong> $' . htmlspecialchars($row['salary']) . '</p>
+									<a href="#job-popup-' . $row['reference_number'] . '" class="button-style">Details</a>
+								</div>
+							</div>';
+				}
+				if (current_category != "") {
+					echo "</div></fieldset>"; // Close last category div and fieldset
+				}
+					
+			?>
 		</fieldset>
 		<!-- Database Engineer Popup -->
 		<div id="job-popup-1" class="popup">
