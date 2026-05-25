@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 13, 2026 at 03:18 AM
+-- Generation Time: May 25, 2026 at 07:18 AM
 -- Server version: 12.2.2-MariaDB
 -- PHP Version: 8.5.6
 
@@ -43,17 +43,18 @@ CREATE TABLE IF NOT EXISTS `Eoi` (
   `skills` varchar(100) NOT NULL,
   `other_skills` text DEFAULT NULL,
   `post_date` timestamp NULL DEFAULT current_timestamp(),
+  `Status` int(11) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Jobs`
+-- Table structure for table `jobslisting`
 --
 
-CREATE TABLE `jobslisting` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `jobslisting` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `job_name` varchar(100) NOT NULL,
   `reference_number` int(11) NOT NULL,
   `job_type` varchar(50) NOT NULL,
@@ -63,8 +64,9 @@ CREATE TABLE `jobslisting` (
   `key_responsibilities` text NOT NULL,
   `essential_requirements` text NOT NULL,
   `preferred_requirements` text NOT NULL,
-  `category` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `category` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `jobslisting`
@@ -79,22 +81,6 @@ INSERT INTO `jobslisting` (`id`, `job_name`, `reference_number`, `job_type`, `lo
 (12, 'Front End Software Engineer', 10025, 'Full-time', 'Hybrid', '$75,000 + Superannuation', 'Assist FakeShop in the development of a user-friendly, modern, and seamless purchasing experience for our Customers. In this role, you will build the parts of our website that shoppers see and interact with, from the product pages to checkout flows.', 'Enhancing user experience and creating engaging web design.', 'Comfort in using CSS in a react framework. Be able to understand basic backend frameworks to ensure functionality between front end and backend elements. Minimum 10 years experience. Good communication skills. Ability to work independently and in small teams.', 'Have used Jira as a project management tool. Be able to work overtime to complete work on time. Although this is primarily a remote position, it would be nice if you would be able to come into the office in Melbourne CBD at least once a week for group meetings/fun get togethers.', 'Front End Development'),
 (13, 'Customer Support', 20001, 'Full-time', 'Remote', '$75,000 + Superannuation', 'Listening to customers questions and concerns and providing answers or responses.', 'Listening to customers questions and concerns and providing answers or responses.', 'Strong communication skills. Patience is always key. Knowledge of the company (Dont worry you will learn). Problem solving skills.', '1 Year Experience. Adaptability.', 'Servicing Customers');
 
---
--- Indexes for table `jobslisting`
---
-ALTER TABLE `jobslisting`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `jobslisting`
---
-ALTER TABLE `jobslisting`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-COMMIT;
 -- --------------------------------------------------------
 
 --
@@ -104,12 +90,18 @@ COMMIT;
 CREATE TABLE IF NOT EXISTS `users` (
   `User ID` int(11) NOT NULL AUTO_INCREMENT,
   `Username` varchar(50) NOT NULL,
-  `Password` varchar(50) NOT NULL,
+  `Password` varchar(255) NOT NULL,
   `is_admin` tinyint(1) NOT NULL,
-  `email` varchar(100) NOT NULL,
   `is_active` tinyint(1) NOT NULL,
   PRIMARY KEY (`User ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`User ID`, `Username`, `Password`, `is_admin`, `is_active`) VALUES
+(1, 'admin', '$2y$12$yhH/yTmjJqPkN0UfsgCeXOi426RdVKolgNjGJP6Jv7SQSobX2FJfa', 1, 1);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
