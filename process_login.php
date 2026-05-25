@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once("settings.php");
+require_once("settings_admin.php");
 
 $conn = mysqli_connect($host, $username, $password, $database);
 
@@ -15,7 +15,7 @@ $user = mysqli_fetch_assoc($result);
 
 if ($user) {
     $_SESSION['username'] = $user['username'];
-    header("Location: welcome.php");
+    header("Location: manage.php");
     exit();
 } else {
     echo "❌ Incorrect username or password.";
