@@ -88,7 +88,7 @@ $result = mysqli_query($conn, $query);
 					$image = 'BackendDev.webp';
 				} else if ($row['category'] == 'Front End Development') {
 					$image = 'FrontEnd.webp';
-				} else if ($row['category'] == 'Customer Support') {
+				} else if ($row['category'] == 'Servicing Customers') {
 					$image = 'CustomerSupport.JPG';
 				} else {
 					$image = 'DefaultJobImage.jpg'; // image for Job categories
