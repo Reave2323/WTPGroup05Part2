@@ -12,7 +12,7 @@
 
 	<style>
 		#JobApplication {
-			color: goldenrod;
+			color: #d2761a;
 			text-align: center;
 			justify-content: center;
 			position: relative;
@@ -34,11 +34,13 @@
 				<h1 id="JobApplication">
 					<strong>Official Employment Application</strong>
 				</h1>
+				<h2 style="text-align: center;">Please leave no spaces blank</h2>
 			</div>
 
 			<div class="div1">
 				<fieldset>
 					<legend>Position Applied</legend>
+
 					<!--<p>
 						<label for="Reference_Number" class="Labeling">Job Reference Number</label>
 						<input type="text" id="Reference_Number" name="Reference_Number" pattern="[0-9]{5}"
@@ -53,7 +55,8 @@
 
 					$query = "SELECT reference_number, job_name FROM jobslisting";
 					$result = mysqli_query($conn, $query);
-					echo '<select name="Reference_Number">';
+					echo '<label for="Reference_Number" class="Labeling">Job Reference Number</label>';
+					echo '<select name="Reference_Number" id="Reference_Number">';
 					while ($row = mysqli_fetch_assoc($result)) {
 						echo '<option value="' . htmlspecialchars($row['reference_number']) . '">'
 							. htmlspecialchars($row['job_name']) .
@@ -74,7 +77,7 @@
 						<label for="FirstName" class="Labeling">First Name</label>
 						<input type="text" id="FirstName" name="First_Name" maxlength="20" pattern="[A-Za-z ]+"
 							required="required" />
-						<label for="LastName"> Last Name</label>
+						<label for="LastName">Last Name</label>
 						<input type="text" id="LastName" name="Last_Name" maxlength="20" pattern="[A-Za-z ]+"
 							required="required" />
 						<label for="DateOfBirth">Date Of Birth</label>
@@ -111,7 +114,7 @@
 						<label for="Street">Street Address</label>
 						<input type="text" id="Street" name="Address[]" pattern="[a-zA-Z0-9\s.,-]{5,40}" maxlength="40"
 							required="required" />
-						<label for="Suburb/Town">Suburb/Town</label>
+						<label for="SuburbTown">Suburb/Town</label>
 						<input type="text" id="SuburbTown" name="Address[]" pattern="[a-zA-Z0-9\s.,-]{5,40}"
 							maxlength="40" required="required" />
 					</p>
@@ -171,7 +174,7 @@
 			<div class="div5">
 				<fieldset>
 					<legend>Other skills</legend>
-					<label for="Other_Skills"></label>
+					<label for="Other_Skills">Other Skills</label>
 					<textarea placeholder="Describe your other skills" id="Other_Skills" name="Other_Skills" rows="4"
 						cols="80%"></textarea>
 				</fieldset>
