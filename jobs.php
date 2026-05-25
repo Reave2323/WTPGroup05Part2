@@ -113,7 +113,7 @@ $result = mysqli_query($conn, $query);
 									<h3><strong>' . htmlspecialchars($row['job_name']) . '</strong></h3>
 									<h4><strong>Reference Number: ' . $row['reference_number'] . '</strong></h4>
 									<p>' . htmlspecialchars($row['job_description']) . '</p>
-									<p><strong>Salary:</strong> $' . htmlspecialchars($row['salary']) . '</p>
+									<p><strong>Salary:</strong> ' . htmlspecialchars($row['salary']) . '</p>
 									<a href="#job-popup-' . $row['reference_number'] . '" class="button-style">Details</a>
 								</div>
 							</div>';
