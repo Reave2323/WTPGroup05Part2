@@ -14,11 +14,11 @@ Moss
 Vichetra
 
 **Task Assignments**
-Task 1: Moss
+Task 1: Moss DONE
 
-Task 2: Vichetra
+Task 2: Vichetra DONE
 
-Task 3: Kanav
+Task 3: Kanav DONE
 
 Task 4: Moss
 

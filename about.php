@@ -144,7 +144,7 @@
 									Co-founding member who helped organise the FakeShop team and
 									project tasks.
 								</p>
-								<p>
+								<p class="noto-sans-jp-text">
 									<strong>Quote:</strong>
 									"FakeShopは本当に私の人生を変えてくれたもので、これからもこのままの生活を続けていきたいと思っています"
 								</p>
@@ -196,7 +196,7 @@
 									Co-founding member who contributed to improving user
 									experience and digital retail solutions.
 								</p>
-								<p><strong>Quote:</strong> “សក់អ្នក ក្បាលអ្នក”</p>
+								<p class="noto-sans-khmer-text"><strong>Quote:</strong> “សក់អ្នក ក្បាលអ្នក”</p>
 								<p>
 									<strong>Translation:</strong> “You are responsible for your
 									own action”
