@@ -100,6 +100,7 @@ $result = mysqli_query($conn, $query);
 						echo "</div></fieldset>"; // Close previous category div and fieldset
 					}
 					$current_category = $row['category'];
+					echo "<fieldset>"; // Start new category fieldset
 					echo "<legend>" . htmlspecialchars($current_category) . "</legend>";
 					echo "<div class='card-container'>"; // Start new category div	
 				}
@@ -107,7 +108,7 @@ $result = mysqli_query($conn, $query);
 
 
 				echo ' <div class="card"> 
-								<img src="images/' . $image . '" alt="' . htmlspecialchars($row['job_name']) . '" width"200" height="200" />
+								<img src="images/' . $image . '" alt="' . htmlspecialchars($row['job_name']) . '" width="200" height="200" />
 								<div class="card-content">
 									<h3><strong>' . htmlspecialchars($row['job_name']) . '</strong></h3>
 									<h4><strong>Reference Number: ' . $row['reference_number'] . '</strong></h4>
