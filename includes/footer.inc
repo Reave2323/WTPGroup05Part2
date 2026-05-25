@@ -16,20 +16,20 @@
 		</p>
 		<img
 			src="images/indigenous-acknowledgement.svg"
-			alt="indigenous-acknowledgement image" />
+			alt="Acknowledgement Flags" />
 		<!--quick footer so we don't forget. Can be changed. Put this in a div box-->
 		<a href="https://www.swinburne.edu.au/"
-			>&copy;Swinburne University of Technology</a
-		>
-		<a>&copy;FakeShop</a>
+			>| &copy;Swinburne University of Technology |
+		</a>
+		<a href="./index.php">&copy;FakeShop</a>
 		<a
 			href="https://wtp-group5-wed-230.atlassian.net?continue=https%3A%2F%2Fwtp-group5-wed-230.atlassian.net%2Fwelcome%2Fsoftware&atlOrigin=eyJpIjoiNDI3YzZkN2EyZjc2NDQ0MzlkNGY2MWRkNzIzZGU1MWYiLCJwIjoiaiJ9"
-			>Jira Board</a
-		>
+			>Jira Board |
+		</a>
 		<a href="https://github.com/Reave2323/WebTechProjectGroup5"
-			>Github Repository</a
-		>
-		<a href="https://reave2323.github.io/WebTechProjectGroup5/">Live Site</a>
+			>Github Repository |
+		</a>
+		<a href="https://reave2323.github.io/WebTechProjectGroup5/">Live Site | </a>
 		<a href="mailto:info@fakeshop.com">Need to Contact Us?</a>
 	</footer>
 </div>

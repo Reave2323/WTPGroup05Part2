@@ -18,7 +18,7 @@
 	<section class="hero">
 		<div class="slide" style="background-image: url('./images/Hero.webp')">
 			<div class="banner-text">
-				<h2>Looking for a new career?</h2>
+				<h1>Looking for a new career?</h1>
 				<p>
 					&copy;FakeShop, The place where dreams are built on child labour.
 					Join us now for a brighter tomorrow, apply today!
@@ -64,19 +64,19 @@
 					<tbody>
 						<tr>
 							<td>Discounts</td>
-							<td>Yes</td>
-							<td colspan="2">No</td>
+							<td class="yes"><strong>Yes</strong></td>
+							<td class="no" colspan="2"><strong>No</strong></td>
 						</tr>
 						<tr>
 							<td>Medical Insurance</td>
-							<td>Yes</td>
-							<td colspan="2">No</td>
+							<td class="yes"><strong>Yes</strong></td>
+							<td class="no" colspan="2"><strong>No</strong></td>
 						</tr>
 						<tr>
 							<td>FakeFood</td>
-							<td>Yes</td>
-							<td>With Subscription</td>
-							<td>No</td>
+							<td class="yes"><strong>Yes</strong></td>
+							<td class="warn"><strong>With Subscription</strong></td>
+							<td class="no"><strong>No</strong></td>
 						</tr>
 					</tbody>
 				</table>
