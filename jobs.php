@@ -124,6 +124,32 @@ $result = mysqli_query($conn, $query);
 
 			?>
 		</fieldset>
+
+
+		<?php
+		$popupinfo = mysqli_query($conn, "SELECT * FROM jobslisting");
+			while ($row = mysqli_fetch_assoc($popupinfo)) {
+				 $image = 'images/backendDev.webp';
+				   } else if ($row['category'] == 'Front End Development') {
+					   $image = 'images/FrontEnd.webp';
+				   } else if ($row['category'] == 'Servicing Customers') {
+					   $image = 'images/CustomerSupport.JPG';
+				   } else {
+					   $image = 'images/DefaultJobImage.jpg'; // image for Job categories
+				   }
+				echo ' <div id="job-popup-' . $row['reference_number'] . '" class="popup">';
+				   
+			}
+				
+				   
+				
+			
+			
+
+		?>
+
+		
+
 		<!-- Database Engineer Popup -->
 		<div id="job-popup-1" class="popup">
 			<div class="popup-card">
