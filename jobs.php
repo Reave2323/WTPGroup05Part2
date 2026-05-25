@@ -13,7 +13,7 @@ if (isset($_GET['search'])) {
 
 }
 
-$query = "SELECT reference_number, job_name FROM Jobs WHERE job_name LIKE '%$search%'";
+$query = "SELECT reference_number, job_name FROM jobslisting WHERE job_name LIKE '%$search%'";
 $result = mysqli_query($conn, $query);
 
 ?>
