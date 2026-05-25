@@ -1,21 +1,20 @@
-
 <?php
-	include_once('settings.php');
+include_once('settings.php');
 
-	$conn = mysqli_connect($host, $user, $pwd, $sql_db);
+$conn = mysqli_connect($host, $user, $pwd, $sql_db);
 
-	if(!$conn) {
-		die("Connection failed: " . mysqli_connect_error());
-	}
+if (!$conn) {
+	die("Connection failed: " . mysqli_connect_error());
+}
 
-	$search = "";
-	if(isset($_GET['search'])) {
-		$search = mysqli_real_escape_string	($conn, $_GET['search']);//quotes and dashes cannot be used to manipulate the query database.
+$search = "";
+if (isset($_GET['search'])) {
+	$search = mysqli_real_escape_string($conn, $_GET['search']);//quotes and dashes cannot be used to manipulate the query database.
 
-	}
+}
 
-	$query = "SELECT reference_number, job_name FROM Jobs WHERE job_name LIKE '%$search%'";
-	$result = mysqli_query($conn, $query);
+$query = "SELECT reference_number, job_name FROM Jobs WHERE job_name LIKE '%$search%'";
+$result = mysqli_query($conn, $query);
 
 ?>
 
@@ -45,9 +44,10 @@
 
 	<div class="content-area">
 
-			<!--search bar-->
+		<!--search bar-->
 		<form method="get" action="jobs.php">
-			<input type="text" name="search" placeholder="Search for jobs..." value="<?php echo htmlspecialchars($search); ?>" />
+			<input type="text" name="search" placeholder="Search for jobs..."
+				value="<?php echo htmlspecialchars($search); ?>" />
 			<button type="submit">Search</button>
 
 		</form>
@@ -81,32 +81,32 @@
 		<!-- Fieldsets for cards-->
 		<fieldset>
 			<?php
-				$current_category = "";
-				while ($row = mysqli_fetch_assoc($result)) {
+			$current_category = "";
+			while ($row = mysqli_fetch_assoc($result)) {
 
-					if ($row['category'] == 'Back End Development'){
-						$image = 'BackendDev.webp';
-					} else if ($row['category'] == 'Front End Development') {
-						$image = 'FrontEnd.webp';
-					} else if ($row['category'] == 'Customer Support') {
-						$image = 'CustomerSupport.JPG';
-					} else {
-						$image = 'DefaultJobImage.jpg'; // image for Job categories
+				if ($row['category'] == 'Back End Development') {
+					$image = 'BackendDev.webp';
+				} else if ($row['category'] == 'Front End Development') {
+					$image = 'FrontEnd.webp';
+				} else if ($row['category'] == 'Customer Support') {
+					$image = 'CustomerSupport.JPG';
+				} else {
+					$image = 'DefaultJobImage.jpg'; // image for Job categories
+				}
+
+
+				if ($row = ['category'] != $current_category) {
+					if ($current_category != "") {
+						echo "</div></fieldset>"; // Close previous category div and fieldset
 					}
+					$current_category = $row['category'];
+					echo "<legend>" . htmlspecialchars($current_category) . "</legend>";
+					echo "<div class='card-container'>"; // Start new category div	
+				}
 
 
-					if ($row =['category'] != $current_category) {
-						if ($current_category != "") {
-							echo "</div></fieldset>"; // Close previous category div and fieldset
-						}
-						$current_category = $row['category'];
-						echo "<legend>" . htmlspecialchars($current_category) . "</legend>";
-						echo "<div class='card-container'>"; // Start new category div	
-					}
-					
-				
 
-					echo' <div class="card"> 
+				echo ' <div class="card"> 
 								<img src="images/' . $image . '" alt="' . htmlspecialchars($row['job_name']) . '" width"200" height="200" />
 								<div class="card-content">
 									<h3><strong>' . htmlspecialchars($row['job_name']) . '</strong></h3>
@@ -116,11 +116,11 @@
 									<a href="#job-popup-' . $row['reference_number'] . '" class="button-style">Details</a>
 								</div>
 							</div>';
-				}
-				if (current_category != "") {
-					echo "</div></fieldset>"; // Close last category div and fieldset
-				}
-					
+			}
+			if ($current_category != "") {
+				echo "</div></fieldset>"; // Close last category div and fieldset
+			}
+
 			?>
 		</fieldset>
 		<!-- Database Engineer Popup -->
