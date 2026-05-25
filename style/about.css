@@ -134,7 +134,7 @@
 
 .flip-card-back {
 	background-color: #2980b9;
-	color: #ffffff;
+	color: #000000;
 	transform: rotateY(180deg);
 	padding: 16px;
 	box-sizing: border-box;
