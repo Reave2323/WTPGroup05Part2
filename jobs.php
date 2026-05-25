@@ -83,7 +83,7 @@ $result = mysqli_query($conn, $query);
 			<?php
 			$current_category = "";
 			while ($row = mysqli_fetch_assoc($result)) {
-				var_dump(array_keys($row));
+				//var_dump(array_keys($row));
 				if ($row['category'] == 'Back End Development') {
 					$image = 'BackendDev.webp';
 				} else if ($row['category'] == 'Front End Development') {
