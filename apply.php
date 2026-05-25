@@ -51,7 +51,7 @@
 						die("Connection failed:" . mysqli_connect_error());
 					}
 
-					$query = "SELECT reference_number, job_name FROM Jobs";
+					$query = "SELECT reference_number, job_name FROM jobslisting";
 					$result = mysqli_query($conn, $query);
 					echo '<select name="Reference_Number">';
 					while ($row = mysqli_fetch_assoc($result)) {
