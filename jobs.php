@@ -95,7 +95,7 @@ $result = mysqli_query($conn, $query);
 				}
 
 
-				if ($row = ['category'] != $current_category) {
+				if ($row['category'] != $current_category) {
 					if ($current_category != "") {
 						echo "</div></fieldset>"; // Close previous category div and fieldset
 					}
