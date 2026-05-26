@@ -114,7 +114,7 @@ $result = mysqli_query($conn, $query);
 									<h4><strong>Reference Number: ' . $row['reference_number'] . '</strong></h4>
 									<p>' . htmlspecialchars($row['job_description']) . '</p>
 									<p><strong>Salary:</strong> ' . htmlspecialchars($row['salary']) . '</p>
-									<a href="#job-popup-' . $row['reference_number'] . '" class="button-style">Details</a>
+									<a href="#job-popup-' . $row['id'] . '" class="button-style">Details</a>
 								</div>
 							</div>';
 			}
@@ -130,7 +130,7 @@ $result = mysqli_query($conn, $query);
 		$popupinfo = mysqli_query($conn, "SELECT * FROM jobslisting");
 		while ($row = mysqli_fetch_assoc($popupinfo)) {
 			if ($row['category'] == 'Back End Development') {
-				$image = 'images/backendDev.webp';
+				$image = 'images/BackendDev.webp';
 			} else if ($row['category'] == 'Front End Development') {
 				$image = 'images/FrontEnd.webp';
 			} else if ($row['category'] == 'Servicing Customers') {
@@ -138,16 +138,16 @@ $result = mysqli_query($conn, $query);
 			} else {
 				$image = 'images/DefaultJobImage.jpg'; // image for Job categories
 			}
-			echo '<div id="job-popup-' . $row['reference_number'] . '" class="popup">
+			echo '<div id="job-popup-' . $row['id'] . '" class="popup">
 					<div class="popup-card">
 					<a href="#" class="close">&times;</a>
 					<div class="left">
-						<img loading="lazy" src="' . $image . '" alt="' . htmlspecialchars($row['job_name']) . '"/>
+						<img loading="lazy" src="' . $image . '" alt="' . htmlspecialchars($row['job_name']) . '" width="100%" height="auto" />
 					</div>
 					<div class="right">
 						<h3>' . htmlspecialchars($row['job_name']) . '</h3>
 						<p> 💼 ' . htmlspecialchars($row['job_type']) . '</p>
-						<p>strong>Location:</strong> ' . htmlspecialchars($row['location']) . '</p>
+						<p><strong>Location:</strong> ' . htmlspecialchars($row['location']) . '</p>
 						<p><strong>Salary:</strong> ' . htmlspecialchars($row['salary']) . '</p>
 						<section>
 							<h2><strong>Key Responsibilities:</strong></h2>
