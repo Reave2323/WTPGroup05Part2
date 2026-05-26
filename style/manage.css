@@ -30,3 +30,19 @@
 	text-decoration: underline;
 	color: #670a0a;
 }
+
+details {
+	position: relative;
+}
+details summary {
+	cursor: pointer;
+	list-style: none;
+}
+details ul {
+	display: none;
+	position: absolute;
+	list-style: none;
+}
+details[open] ul {
+	display: block;
+}

@@ -4,7 +4,7 @@ $conn = mysqli_connect($host, $user, $pwd, $sql_db);
 if (!$conn) {
     die("Connection failed:" . mysqli_connect_error());
 }
-
+/*
 $sql = "CREATE TABLE IF NOT EXISTS Eoi (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     reference_number INT(5) NOT NULL,
@@ -24,7 +24,7 @@ $sql = "CREATE TABLE IF NOT EXISTS Eoi (
 if (!mysqli_query($conn, $sql)) {
     die("Query failed: " . mysqli_error($conn));
 }
-
+*/
 if (isset($_POST["First_Name"]) && isset($_POST["Last_Name"]) && isset($_POST["Email_Address"])) {
 
     $reference_number = htmlspecialchars(trim($_POST["Reference_Number"]));
