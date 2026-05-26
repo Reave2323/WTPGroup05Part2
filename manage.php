@@ -51,6 +51,17 @@ $applications = mysqli_query($conn, $query);
                     echo "<p>" . htmlspecialchars($row["state"]) . "</p>";
                     echo "<p>" . htmlspecialchars($row["skills"]) . "</p>";
                     echo "<p>" . htmlspecialchars($row["other_skills"]) . "</p>";
+                    echo "<p>" . htmlspecialchars($row["post_date"]) . "</p>";
+                    if ($row["Status"] == 1) {
+                        echo "<p>Status: Pending</p>";
+                    } elseif ($row["Status"] == 2) {
+                        echo "<p>Status: Rejected</p>";
+                    } elseif ($row["Status"] == 3) {
+                        echo "<p>Status: Accepted</p>";
+                    } else {
+                        echo "<p>Status: Unknown</p>";
+                    }
+
                     echo "</div>";
                 }
                 ?>
