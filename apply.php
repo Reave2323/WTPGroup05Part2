@@ -264,7 +264,7 @@ unset($_SESSION["errors"], $_SESSION["old"]);
 
 			<div class="div6">
 				<input type="submit" value="Apply" class="apply_button" />
-				<input type="button" value="Reset Application" class="reset_button" onclick="window.location.href='apply.php'" />
+				<a href="apply.php" class="reset_button">Reset Application</a>
 			</div>
 		</form>
 	</div>
