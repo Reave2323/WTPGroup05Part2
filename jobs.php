@@ -138,11 +138,11 @@ $result = mysqli_query($conn, $query);
 			} else {
 				$image = 'images/DefaultJobImage.jpg'; // image for Job categories
 			}
-			echo  '<div id="job-popup-' . $row['reference_number'] . '" class="popup">
+			echo '<div id="job-popup-' . $row['reference_number'] . '" class="popup">
 					<div class="popup-cards"
 					<a href="#" class="close">&times;</a>
 					<div class="left">
-						<img loading="lazy" src="' . $image . '" alt="' . htmlspecialchars($row['job_name']) .'"/>
+						<img loading="lazy" src="' . $image . '" alt="' . htmlspecialchars($row['job_name']) . '"/>
 					</div>
 					<div class="right">
 						<h3>' . htmlspecialchars($row['job_name']) . '</h3>
@@ -161,13 +161,13 @@ $result = mysqli_query($conn, $query);
 							<h2><strong>Preferred Requirements:</strong></h2>
 							<p>' . htmlspecialchars($row['preferred_requirements']) . '</p>
 						</section>
-						<a href="apply.html" class="button-style">Apply Now</a>
+						<a href="apply.php" class="button-style">Apply Now</a>
 					</div>
 				</div>
 			</div>';
 
-						
-						
+
+
 
 		}
 
