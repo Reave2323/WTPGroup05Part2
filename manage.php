@@ -13,6 +13,7 @@ if (!$conn) {
 $query = "SELECT * FROM jobslisting";
 $jobs = mysqli_query($conn, $query);
 
+
 $query = "SELECT * FROM Eoi";
 $applications = mysqli_query($conn, $query);
 
@@ -34,15 +35,9 @@ $applications = mysqli_query($conn, $query);
         <div class="manager-portal">
             <h1>Manager Portal</h1>
             <p>Welcome to the manager portal. Here you can manage job listings and view applications.</p>
-            <div class="manager-list">
-                <ul class="manager-links">
-                    <li><a href="manage_jobs.php">Manage Job Listings</a></li>
-                    <li><a href="applications.php">View Applications</a></li>
-                </ul>
-            </div>
 
             <details class="jobs-list">
-                <summary class="jobs">Manage Job Listings</summary>
+                <summary class="title">Manage Job Listings</summary>
                 <?php
                 while ($row = mysqli_fetch_assoc($jobs)) {
                     echo '<div class="job-card">
@@ -64,13 +59,30 @@ $applications = mysqli_query($conn, $query);
                             <h2><strong>Preferred Requirements:</strong></h2>
                             <p>' . htmlspecialchars($row['preferred_requirements']) . '</p>
                         </section>
+                        <a href="#job-edit-' . $row['reference_number'] . '" class="button-style">Edit</a>
+                        <a href="#job-delete-' . $row['reference_number'] . '" class="button-style delete-button">Delete</a>
                     </div>';
+                }
+                while ($row = mysqli_fetch_assoc($jobs)) {
+                    echo '<div id="#job-delete-' . $row['reference_number'] . '" class="job-delete">
+                    <h2>Delete Job Listing</h2>
+                    <p>This section is under construction.</p>
+                </div>';
+                }
+                while ($row = mysqli_fetch_assoc($jobs)) {
+                    echo '<div id="#job-edit-' . $row['reference_number'] . '" class="job-edit">';
+                    echo '<div class="job-edit-card">';
+                    echo '<h2>Edit Job Listing</h2>';
+                    echo '<p>This section is under construction.</p>';
+                    echo '<h3>' . htmlspecialchars($row['job_name']) . '</h3>';
+                    echo '</div>';
+                    echo '</div>';
                 }
                 ?>
             </details>
 
             <details class="applications-list">
-                <summary>View Applications</summary>
+                <summary class="title">View Applications</summary>
                 <p>Here you can view all applications submitted by candidates. (This section is under construction.)</p>
                 <?php
                 while ($row = mysqli_fetch_assoc($applications)) {
