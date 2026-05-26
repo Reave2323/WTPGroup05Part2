@@ -13,29 +13,6 @@
 	margin-bottom: 20px;
 }
 
-.manager-list {
-	display: block;
-	margin: 40px auto;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	background-color: #e0e0e0;
-	width: 50%;
-	overflow: hidden;
-}
-.manager-links {
-	list-style-type: none;
-	padding: 0;
-	color: #333;
-}
-
-.manager-links li {
-	margin-bottom: 10px;
-}
-.manager-links a {
-	text-decoration: underline;
-	color: #670a0a;
-}
-
 details {
 	position: relative;
 }
