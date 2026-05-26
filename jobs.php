@@ -139,7 +139,7 @@ $result = mysqli_query($conn, $query);
 				$image = 'images/DefaultJobImage.jpg'; // image for Job categories
 			}
 			echo '<div id="job-popup-' . $row['reference_number'] . '" class="popup">
-					<div class="popup-cards"
+					<div class="popup-card"
 					<a href="#" class="close">&times;</a>
 					<div class="left">
 						<img loading="lazy" src="' . $image . '" alt="' . htmlspecialchars($row['job_name']) . '"/>
