@@ -96,12 +96,12 @@
 					<fieldset>
 						<legend>Gender</legend>
 						<label for="Male">M</label>
-						<input type="radio" id="Male" name="Gender" value="male" required="required" />
+						<input type="radio" id="Male" name="Gender" value="Male" required="required" />
 						<label for="Female">F</label>
 						<input type="radio" id="Female" name="Gender" value="Female" />
 
 						<label for="Others">Others</label>
-						<input type="radio" id="Others" name="Gender" value="others" />
+						<input type="radio" id="Others" name="Gender" value="Other" />
 					</fieldset>
 				</fieldset>
 			</div>
