@@ -1,3 +1,16 @@
+<?php
+require_once("settings.php");
+
+$conn = @mysqli_connect($host, $user, $pwd, $sql_db);
+
+if (!$conn) {
+    die("<p>Database connection failed.</p>");
+}
+
+$query = "SELECT member_name, project_part, contribution_text, quote_text FROM `members contribution` ORDER BY member_name, project_part";
+$result = mysqli_query($conn, $query);
+?>
+
 <!doctype html>
 <html lang="en">
 <!-- Generative AI was used to help refine the structure and styling ideas for this page.
