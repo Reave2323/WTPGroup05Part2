@@ -41,25 +41,49 @@ $applications = mysqli_query($conn, $query);
                 </ul>
             </div>
 
-            <details>
-                <summary>Manage Job Listings</summary>
+            <details class="jobs-list">
+                <summary class="jobs">Manage Job Listings</summary>
                 <?php
                 while ($row = mysqli_fetch_assoc($jobs)) {
-                    echo "<div class='job-listing'>";
-                    echo "<h2>" . htmlspecialchars($row['job_name']) . "</h2>";
-                    echo "<p>" . htmlspecialchars($row['job_description']) . "</p>";
-                    echo "</div>";
+                    echo '<div class="job-card">
+                        <section>
+                            <h3>' . htmlspecialchars($row['job_name']) . '</h3>
+                            <p> 💼 ' . htmlspecialchars($row['job_type']) . '</p>
+                            <p><strong>Location:</strong> ' . htmlspecialchars($row['location']) . '</p>
+                            <p><strong>Salary:</strong> ' . htmlspecialchars($row['salary']) . '</p>
+                        </section>
+                        <section>
+                            <h2><strong>Key Responsibilities:</strong></h2>
+                            <p>' . htmlspecialchars($row['key_responsibilities']) . '</p>
+                        </section>
+                        <section>
+                            <h2><strong>Essential Requirements:</strong></h2>
+                                <p>' . htmlspecialchars($row['essential_requirements']) . '</p>
+                        </section>
+                        <section>
+                            <h2><strong>Preferred Requirements:</strong></h2>
+                            <p>' . htmlspecialchars($row['preferred_requirements']) . '</p>
+                        </section>
+                    </div>';
                 }
                 ?>
             </details>
-            <details>
+
+            <details class="applications-list">
                 <summary>View Applications</summary>
                 <p>Here you can view all applications submitted by candidates. (This section is under construction.)</p>
                 <?php
                 while ($row = mysqli_fetch_assoc($applications)) {
-                    echo "<div class='job-listing'>";
-                    echo "<h2>" . htmlspecialchars($row['fname']) . " " . htmlspecialchars($row['lname']) . "</h2>";
+                    echo "<div class='application-card'>";
+                    echo "<h2> Name: " . htmlspecialchars($row['fname']) . " " . htmlspecialchars($row['lname']) . "</h2>";
                     echo "<p>" . htmlspecialchars($row['email']) . "</p>";
+                    echo "<p>" . htmlspecialchars($row['phone']) . "</p>";
+                    echo "<p>" . htmlspecialchars($row["dob"]) . "</p>";
+                    echo "<p>" . htmlspecialchars($row["gender"]) . "</p>";
+                    echo "<p>" . htmlspecialchars($row["address"]) . "</p>";
+                    echo "<p>" . htmlspecialchars($row["state"]) . "</p>";
+                    echo "<p>" . htmlspecialchars($row["skills"]) . "</p>";
+                    echo "<p>" . htmlspecialchars($row["other_skills"]) . "</p>";
                     echo "</div>";
                 }
                 ?>
