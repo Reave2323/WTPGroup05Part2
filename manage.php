@@ -10,9 +10,6 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$query = "SELECT * FROM jobslisting";
-$jobs = mysqli_query($conn, $query);
-
 
 $query = "SELECT * FROM Eoi";
 $applications = mysqli_query($conn, $query);
