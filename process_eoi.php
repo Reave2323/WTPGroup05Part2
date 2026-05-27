@@ -164,6 +164,8 @@ $stmt = mysqli_prepare(
     "INSERT INTO Eoi (reference_number, fname, lname, dob, email, phone, gender, addr, country_state, skills, other_skills)
      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
 );
+
+//Bind to avoid SQL injection and ensure data is properly escaped
 mysqli_stmt_bind_param(
     $stmt,
     "sssssssssss",
@@ -183,6 +185,7 @@ mysqli_stmt_bind_param(
 if (!mysqli_stmt_execute($stmt)) {
     die("Query failed: " . mysqli_stmt_error($stmt));
 }
+//Get the auto-generated application ID for the redirect
 $app_id = mysqli_insert_id($conn);
 mysqli_stmt_close($stmt);
 mysqli_close($conn);
