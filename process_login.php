@@ -7,7 +7,6 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-
 // Get user input and sanitize it
 $username = trim($_POST['username']);
 $password = trim($_POST['password']);
