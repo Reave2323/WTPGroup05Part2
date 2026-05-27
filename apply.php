@@ -144,7 +144,7 @@ unset($_SESSION["errors"], $_SESSION["old"]);
 						<?php if (isset($errors["Email_Address"])): ?>
 							<span class="field-error"><?= htmlspecialchars($errors["Email_Address"]) ?></span>
 						<?php endif; ?>
-						<label for="Phone_Number">Phone Number</label>
+						<label for="Phone_Number">Phone</label>
 						<input type="text" id="Phone_Number" name="Phone_Number"
 							value="<?= htmlspecialchars($old["Phone_Number"] ?? "") ?>" />
 						<?php if (isset($errors["Phone_Number"])): ?>
@@ -260,7 +260,7 @@ unset($_SESSION["errors"], $_SESSION["old"]);
 			<div class="div5">
 				<fieldset>
 					<legend>Other skills</legend>
-					<label for="Other_Skills">Other Skills</label>
+					<label for="Other_Skills">Enter Below (optional)</label><br />
 					<textarea placeholder="Describe your other skills" id="Other_Skills" name="Other_Skills"
 						rows="4"><?= htmlspecialchars($old["Other_Skills"] ?? "") ?></textarea>
 					<?php if (isset($errors["Other_Skills"])): ?>
