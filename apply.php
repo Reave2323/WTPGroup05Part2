@@ -1,4 +1,5 @@
 <?php
+// Start session to retrieve errors and old input values
 session_start();
 $errors = $_SESSION["errors"] ?? [];
 $old = $_SESSION["old"] ?? [];
@@ -25,7 +26,6 @@ unset($_SESSION["errors"], $_SESSION["old"]);
 			padding: 1%;
 			grid-template-columns: 0%;
 			margin: 0%;
-			text-decoration-line: underline;
 		}
 
 		.form-errors {
@@ -59,7 +59,7 @@ unset($_SESSION["errors"], $_SESSION["old"]);
 		<form action="process_eoi.php" method="post">
 			<div class="Kbal">
 				<h1 id="JobApplication">
-					<strong>Official Employment Application</strong>
+					<strong>Expression Of Interest Form</strong>
 				</h1>
 				<h2 style="text-align: center;">Please leave no spaces blank</h2>
 			</div>
@@ -90,6 +90,7 @@ unset($_SESSION["errors"], $_SESSION["old"]);
 					$result = mysqli_query($conn, $query);
 					echo '<label for="Reference_Number" class="Labeling">Job Reference Number</label>';
 					echo '<select name="Reference_Number" id="Reference_Number">';
+					//Adds a list of options in a drop down menu, loops through the database
 					while ($row = mysqli_fetch_assoc($result)) {
 						$selected = (($old["Reference_Number"] ?? "") == $row["reference_number"]) ? ' selected' : '';
 						echo '<option value="' . htmlspecialchars($row['reference_number']) . '"' . $selected . '>'
@@ -97,6 +98,7 @@ unset($_SESSION["errors"], $_SESSION["old"]);
 							'</option>';
 					}
 					echo '</select>';
+					//Practically impossible for this to error, but just in case
 					if (isset($errors["Reference_Number"])) {
 						echo '<span class="field-error">' . htmlspecialchars($errors["Reference_Number"]) . '</span>';
 					}
@@ -111,6 +113,9 @@ unset($_SESSION["errors"], $_SESSION["old"]);
 					<legend>Personal Information</legend>
 
 					<p>
+						<!---|Applies for All|-->
+						<!--If session has errors or old data, it will replace the field with data from old. 
+						Errors will appear as a span underneath the input field-->
 						<label for="FirstName" class="Labeling">First Name</label>
 						<input type="text" id="FirstName" name="First_Name" maxlength="20"
 							value="<?= htmlspecialchars($old["First_Name"] ?? "") ?>" />
@@ -148,6 +153,8 @@ unset($_SESSION["errors"], $_SESSION["old"]);
 					</p>
 
 					<fieldset>
+						<!-- Will check to see if a gender was selected in old input.
+						 If so, that option will be re-selected. -->
 						<legend>Gender</legend>
 						<label for="Male">M</label>
 						<input type="radio" id="Male" name="Gender" value="Male" <?= (($old["Gender"] ?? "") === "Male" ? "checked" : "") ?> />
@@ -254,8 +261,8 @@ unset($_SESSION["errors"], $_SESSION["old"]);
 				<fieldset>
 					<legend>Other skills</legend>
 					<label for="Other_Skills">Other Skills</label>
-					<textarea placeholder="Describe your other skills" id="Other_Skills" name="Other_Skills" rows="4"
-						cols="80%"><?= htmlspecialchars($old["Other_Skills"] ?? "") ?></textarea>
+					<textarea placeholder="Describe your other skills" id="Other_Skills" name="Other_Skills"
+						rows="4"><?= htmlspecialchars($old["Other_Skills"] ?? "") ?></textarea>
 					<?php if (isset($errors["Other_Skills"])): ?>
 						<span class="field-error"><?= htmlspecialchars($errors["Other_Skills"]) ?></span>
 					<?php endif; ?>

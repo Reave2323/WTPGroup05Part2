@@ -49,6 +49,7 @@
 			<div class="why">
 				<h2>Why work with us</h2>
 				<p>We have many benifits that rival even our closest comptitors</p>
+				<div style="overflow-x: auto;">
 				<table class="home-table">
 					<caption>
 						Benifits With FakeShop
@@ -80,6 +81,7 @@
 						</tr>
 					</tbody>
 				</table>
+				</div>
 			</div>
 		</div>
 	</div>

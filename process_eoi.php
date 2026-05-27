@@ -51,10 +51,12 @@ if (empty($dob_raw)) {
 } elseif (!preg_match('/^\d{2}\/\d{2}\/\d{4}$/', $dob_raw)) {
     $errors["DateOfBirth"] = "Date of birth must be in dd/mm/yyyy format.";
 } else {
+    //Splits the date into parts to work with checkdate
     list($day, $month, $year) = explode("/", $dob_raw);
     if (!checkdate((int) $month, (int) $day, (int) $year)) {
         $errors["DateOfBirth"] = "Please enter a valid date of birth.";
     } else {
+        //Checks to ensure the applicant is between 18 and 100 years old
         $dob_date = new DateTime("$year-$month-$day");
         $today = new DateTime();
         $age = $today->diff($dob_date)->y;
@@ -145,7 +147,7 @@ if (strlen($other_skills) > 500) {
     $errors["Other_Skills"] = "Other skills description must be 500 characters or fewer.";
 }
 
-// If validation failed, redirect back with errors
+// If validation failed, redirect back with errors and old input
 if (!empty($errors)) {
     $_SESSION["errors"] = $errors;
     $_SESSION["old"] = $old;
@@ -186,7 +188,7 @@ mysqli_stmt_close($stmt);
 mysqli_close($conn);
 
 unset($_SESSION["errors"], $_SESSION["old"]);
-
+//Encodes name and app_id to URL for the submit page
 header("Location: submitted.php?name=" . urlencode($fname . " " . $lname) . "&app_id=" . $app_id);
 exit();
 ?>

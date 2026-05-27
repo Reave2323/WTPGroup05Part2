@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `Eoi` (
   `lname` varchar(50) NOT NULL,
   `dob` varchar(10) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `phone` int(10) NOT NULL,
+  `phone` varchar(12) NOT NULL,
   `gender` varchar(6) NOT NULL,
   `addr` text NOT NULL,
   `country_state` varchar(15) NOT NULL,
