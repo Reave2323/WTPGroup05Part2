@@ -11,7 +11,7 @@ if (!$conn) {
 }
 
 
-$query = "SELECT * FROM Eoi";
+$query = "SELECT * FROM eoi";
 $applications = mysqli_query($conn, $query);
 
 ?>

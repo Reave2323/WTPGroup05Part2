@@ -161,7 +161,7 @@ $skills_str = implode(", ", $skills_filtered);
 
 $stmt = mysqli_prepare(
     $conn,
-    "INSERT INTO Eoi (reference_number, fname, lname, dob, email, phone, gender, addr, country_state, skills, other_skills)
+    "INSERT INTO eoi (reference_number, fname, lname, dob, email, phone, gender, addr, country_state, skills, other_skills)
      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
 );
 
