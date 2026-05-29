@@ -13,28 +13,23 @@
 	margin-bottom: 20px;
 }
 
-details {
-	position: relative;
-}
-details summary {
-	cursor: pointer;
-	list-style: none;
-}
-details ul {
-	display: none;
-	position: absolute;
-	list-style: none;
-}
-details[open] ul {
-	display: block;
-}
-
 .manager-portal::after {
 	content: "";
 	display: table;
 	clear: both;
 }
 
+.logout-button {
+	background-color: #dc3545;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	text-decoration: none;
+}
+/* Job listings style */
 .jobs-list {
 	float: left;
 	width: 48%;
@@ -42,11 +37,6 @@ details[open] ul {
 	text-align: left;
 }
 
-.applications-list {
-	float: right;
-	width: 48%;
-	text-align: left;
-}
 .subtitle {
 	font-size: 20px;
 	font-weight: bold;
@@ -54,11 +44,53 @@ details[open] ul {
 	margin-bottom: 10px;
 }
 
+.applications-list {
+	float: right;
+	width: 48%;
+	text-align: left;
+}
+/* Styles for the application management section */
 .applications-container {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 15px;
 	width: 100%;
+}
+
+.status-section {
+	margin-bottom: 40px;
+}
+
+.section-heading {
+	font-size: 22px;
+	font-weight: bold;
+	padding: 10px 15px;
+	border-radius: 5px;
+	margin-bottom: 15px;
+	text-align: left;
+}
+
+.pending-heading {
+	background-color: #fff8e1;
+	color: #856404;
+	border-left: 5px solid #ffc107;
+}
+
+.accepted-heading {
+	background-color: #e8f5e9;
+	color: #155724;
+	border-left: 5px solid #28a745;
+}
+
+.rejected-heading {
+	background-color: #fdecea;
+	color: #721c24;
+	border-left: 5px solid #dc3545;
+}
+
+.no-applications {
+	color: #888;
+	font-style: italic;
 }
 
 .application-card {
@@ -70,4 +102,16 @@ details[open] ul {
 	flex: 1 1 calc(25% - 12px);
 	min-width: 200px;
 	text-align: left;
+}
+
+.application-card.pending {
+	border-top: 3px solid #ffc107;
+}
+
+.application-card.accepted {
+	border-top: 3px solid #28a745;
+}
+
+.application-card.rejected {
+	border-top: 3px solid #dc3545;
 }
