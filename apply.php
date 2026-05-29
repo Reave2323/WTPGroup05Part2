@@ -226,12 +226,12 @@ unset($_SESSION["errors"], $_SESSION["old"]);
 
 					<p>
 						<?php
-						$checked_skills = $old["Skills"] ?? ["HTML", "JIRA", "CSS", "Javascript", "PHP", "MySQL", "Communication", "ProblemSolvingSkills"];
+						$checked_skills = $old["Skills"] ?? ["HTML", "JIRA", "CSS", "JavaScript", "PHP", "MySQL", "Communication", "Problem Solving Skills"];
 						$skill_labels = [
 							"HTML" => "HTML",
 							"JIRA" => "JIRA",
 							"CSS" => "CSS",
-							"Javascript" => "Javascript",
+							"JavaScript" => "JavaScript",
 							"PHP" => "PHP",
 							"MySQL" => "MySQL",
 						];
@@ -246,12 +246,12 @@ unset($_SESSION["errors"], $_SESSION["old"]);
 					<p>
 						<?php
 						$comm_checked = in_array("Communication", $checked_skills) ? " checked" : "";
-						$prob_checked = in_array("ProblemSolvingSkills", $checked_skills) ? " checked" : "";
+						$prob_checked = in_array("Problem Solving Skills", $checked_skills) ? " checked" : "";
 						?>
 						<label for="Communication">Communication Skills</label>
 						<input type="checkbox" name="Skills[]" id="Communication" value="Communication" <?= $comm_checked ?> />
 						<label for="ProblemSolvingSkills">Problem Solving Skills</label>
-						<input type="checkbox" name="Skills[]" id="ProblemSolvingSkills" value="ProblemSolvingSkills"
+						<input type="checkbox" name="Skills[]" id="ProblemSolvingSkills" value="Problem Solving Skills"
 							<?= $prob_checked ?> />
 					</p>
 				</fieldset>

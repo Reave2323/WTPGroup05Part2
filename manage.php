@@ -80,12 +80,12 @@ while ($row = mysqli_fetch_assoc($applications)) {
                             <p><strong>Applied for:</strong> <?php echo htmlspecialchars($row['job_name']); ?></p>
                             <p><?php echo htmlspecialchars($row['email']); ?></p>
                             <p><?php echo htmlspecialchars($row['phone']); ?></p>
-                            <p><?php echo htmlspecialchars($row['dob']); ?></p>
-                            <p><?php echo htmlspecialchars($row['gender']); ?></p>
-                            <p><?php echo htmlspecialchars($row['address']); ?></p>
-                            <p><?php echo htmlspecialchars($row['state']); ?></p>
-                            <p><?php echo htmlspecialchars($row['skills']); ?></p>
-                            <p><?php echo htmlspecialchars($row['other_skills']); ?></p>
+                            <p><?php echo "DOB: " . htmlspecialchars($row['dob']); ?></p>
+                            <p><?php echo "Gender: " . htmlspecialchars($row['gender']); ?></p>
+                            <p><?php echo "Address: " . htmlspecialchars($row['addr']); ?></p>
+                            <p><?php echo "State: " . htmlspecialchars($row['country_state']); ?></p>
+                            <p><?php echo "Skills: " . htmlspecialchars($row['skills']); ?></p>
+                            <p><?php echo "Other Skills: " . htmlspecialchars($row['other_skills']); ?></p>
                             <p><?php echo htmlspecialchars($row['post_date']); ?></p>
                             <p class="status-pending">Status: Pending</p>
                             <form method="post" action="manage.php">
@@ -114,6 +114,9 @@ while ($row = mysqli_fetch_assoc($applications)) {
                             <p><strong>Applied for:</strong> <?php echo htmlspecialchars($row['job_name']); ?></p>
                             <p><?php echo htmlspecialchars($row['email']); ?></p>
                             <p><?php echo htmlspecialchars($row['phone']); ?></p>
+                            <p>
+                                <?php echo "DOB: " . htmlspecialchars($row['dob']); ?>
+                            </p>
                             <p><?php echo htmlspecialchars($row['address']); ?></p>
                             <p><?php echo htmlspecialchars($row['state']); ?></p>
                             <p class="status-accepted">Status: Accepted</p>
