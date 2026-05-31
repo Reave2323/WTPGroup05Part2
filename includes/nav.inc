@@ -19,7 +19,13 @@
 			<form method="get" action="jobs.php">
 				<input type="text" name="search" placeholder="Search..."
 					value="<?php echo isset($_GET['search'])? htmlspecialchars($_GET['search']) : '' ; ?>" />
-				<a href="#" class="search">🔍</a>
+					<?php if (!empty($_GET['search])) {?>
+					 <button type="submit" class="search">🔍</button>
+					<?php} else {?>
+					<a href="#" class="search">🔍</a>
+					<?php } ?>
+					
+
 			</form>
 		</div>
 	</div>
