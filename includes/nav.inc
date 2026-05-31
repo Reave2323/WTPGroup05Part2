@@ -21,11 +21,9 @@
 					value="<?php echo isset($_GET['search'])? htmlspecialchars($_GET['search']) : '' ; ?>" />
 					<?php if (!empty($_GET['search'])) {?>
 					 <button type="submit" class="search">🔍</button>
-					<?php} else {?>
+					<?php } else {?>
 					<a href="#" class="search">🔍</a>
-					<?php } ?>
-					
-
+				<?php } ?>
 			</form>
 		</div>
 	</div>
