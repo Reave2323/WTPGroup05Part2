@@ -44,13 +44,7 @@ $result = mysqli_query($conn, $query);
 
 	<div class="content-area">
 
-		<!--search bar-->
-		<form method="get" action="jobs.php">
-			<input type="text" name="search" placeholder="Search for jobs..."
-				value="<?php echo htmlspecialchars($search); ?>" />
-			<button type="submit">Search</button>
-
-		</form>
+	
 
 		<h2><strong>Our Mission</strong></h2>
 		<p>
