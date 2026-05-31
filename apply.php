@@ -56,7 +56,7 @@ unset($_SESSION["errors"], $_SESSION["old"]);
 	include("./includes/nav.inc");
 	?>
 	<div class="content-area" style="margin-top:5px">
-		<form action="process_eoi.php" method="post">
+		<form action="process_eoi.php" method="post" class="apply_form"> 
 			<div class="Kbal">
 				<h1 id="JobApplication">
 					<strong>Expression Of Interest Form</strong>
