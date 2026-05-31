@@ -44,7 +44,7 @@ $result = mysqli_query($conn, $query);
 
 	<div class="content-area">
 
-	
+
 
 		<h2><strong>Our Mission</strong></h2>
 		<p>
@@ -77,15 +77,15 @@ $result = mysqli_query($conn, $query);
 			<?php
 			$current_category = "";
 			while ($row = mysqli_fetch_assoc($result)) {
-				
+
 				if ($row['category'] == 'Back End Development') {
-					$image = 'BackendDev.webp';
+					$image = './images/BackendDev.webp';
 				} else if ($row['category'] == 'Front End Development') {
-					$image = 'FrontEnd.webp';
+					$image = './images/FrontEnd.webp';
 				} else if ($row['category'] == 'Servicing Customers') {
-					$image = 'CustomerSupport.JPG';
+					$image = './images/CustomerSupport.webp';
 				} else {
-					$image = 'DefaultJobImage.jpg'; // image for Job categories
+					$image = 'DefaultJobImage.webp'; // image for Job categories
 				}
 
 
@@ -102,7 +102,7 @@ $result = mysqli_query($conn, $query);
 
 
 				echo ' <div class="card"> 
-								<img src="images/' . $image . '" alt="' . htmlspecialchars($row['job_name']) . '" width="200" height="200" />
+								<img src="' . $image . '" alt="' . htmlspecialchars($row['job_name']) . '" width="200" height="200" />
 								<div class="card-content">
 									<h3><strong>' . htmlspecialchars($row['job_name']) . '</strong></h3>
 									<h4><strong>Reference Number: ' . $row['reference_number'] . '</strong></h4>
@@ -124,13 +124,13 @@ $result = mysqli_query($conn, $query);
 		$popupinfo = mysqli_query($conn, "SELECT * FROM jobslisting");
 		while ($row = mysqli_fetch_assoc($popupinfo)) {
 			if ($row['category'] == 'Back End Development') {
-				$image = 'images/BackendDev.webp';
+				$image = './images/BackendDev.webp';
 			} else if ($row['category'] == 'Front End Development') {
-				$image = 'images/FrontEnd.webp';
+				$image = './images/FrontEnd.webp';
 			} else if ($row['category'] == 'Servicing Customers') {
-				$image = 'images/CustomerSupport.JPG';
+				$image = './images/CustomerSupport.webp';
 			} else {
-				$image = 'images/DefaultJobImage.jpg'; // image for Job categories
+				$image = 'images/DefaultJobImage.webp'; // image for Job categories
 			}
 			echo '<div id="job-popup-' . $row['id'] . '" class="popup">
 					<div class="popup-card">
@@ -170,15 +170,15 @@ $result = mysqli_query($conn, $query);
 
 
 
-		 ?>
+		?>
 
 
 
-		
 
-	<?php
-	include("./includes/footer.inc");
-	?>
+
+		<?php
+		include("./includes/footer.inc");
+		?>
 </body>
 
 </html>
