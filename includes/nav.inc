@@ -17,7 +17,7 @@
 		</nav>
 		<div class="nav-actions">
 			<form method="get" action="jobs.php">
-				<input type="text" name="search" placeholder="Search..." autofocus
+				<input type="text" name="search" placeholder="Search..." 
 					value="<?php echo isset($_GET['search'])? htmlspecialchars($_GET['search']) : '' ; ?>" />
 					<a href="#" class="search">🔍</a>
 			</form>
