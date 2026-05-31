@@ -83,58 +83,21 @@ $result = mysqli_query($conn, $query);
 			</section>
 			<!-- Member contributions and quotes using a definition list -->
 			<section class="member-definition-list">
-				<h2 style="text-align: center">Member Contributions and Quotes</h2>
-				<dl>
-					<dt>
-						Moss Whitehall
-						<span class="student-id">Student ID: 106507235</span>
-					</dt>
-					<dd>
-						Co-founding member of FakeShop and helped organise the FakeShop
-						team and project tasks.
-					</dd>
-					<dd class="noto-sans-jp-text">
-						Quote in first/favourite language:
-						FakeShopは本当に私の人生を変えてくれたもので、これからもこのままの生活を続けていきたいと思っています。
-					</dd>
-					<dd>
-						English translation: “FakeShop has really changed my life and is
-						how I want my life to keep going.”
-					</dd>
-
-					<dt>
-						Kanavpreet Multani
-						<span class="student-id">Student ID: 106504223</span>
-					</dt>
-					<dd>
-						Co-founding member of FakeShop and contributed ideas focused on
-						business, growth, and innovation.
-					</dd>
-					<dd>
-						Quote in first/favourite language: “Working together has helped us
-						turn our ideas into reality.”
-					</dd>
-					<dd>
-						English translation: “Working together has helped us turn our
-						ideas into reality.”
-					</dd>
-
-					<dt>
-						Vichetra Sam An
-						<span class="student-id">Student ID: 105690697</span>
-					</dt>
-					<dd>
-						Co-founding member of FakeShop and contributed to improving user
-						experience and digital retail solutions.
-					</dd>
-					<dd class="noto-sans-khmer-text">
-						Quote in first/favourite language: “សក់អ្នក ក្បាលអ្នក”
-					</dd>
-					<dd>
-						English translation: “You are responsible for your own action”
-					</dd>
-				</dl>
-			</section>
+	<h2 style="text-align: center">Member Contributions and Quotes</h2>
+	<dl>
+		<?php
+		if ($result && mysqli_num_rows($result) > 0) {
+			while ($row = mysqli_fetch_assoc($result)) {
+				echo "<dt>" . htmlspecialchars($row['member_name']) . " - " . htmlspecialchars($row['project_part']) . "</dt>";
+				echo "<dd>" . htmlspecialchars($row['contribution_text']) . "</dd>";
+				echo "<dd><strong>Quote:</strong> " . htmlspecialchars($row['quote_text']) . "</dd>";
+			}
+		} else {
+			echo "<dd>No member contributions found.</dd>";
+		}
+		?>
+	</dl>
+</section>
 			<!-- Team member flip section -->
 			<section class="member-info">
 				<h2 style="text-align: center">Team Members and Contributions</h2>
