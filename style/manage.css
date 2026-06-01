@@ -112,6 +112,9 @@ body {
 	text-align: left;
 	transition: transform 0.2s ease;
 }
+.application-card:hover {
+    transform: scale(1.02);
+}
 
 .application-card.pending {
 	border-top: 3px solid #ffc107;
