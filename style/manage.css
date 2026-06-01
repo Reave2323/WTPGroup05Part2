@@ -106,10 +106,11 @@ body {
 	border: 1px solid #ddd;
 	border-radius: 5px;
 	padding: 15px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 	flex: 1 1 calc(25% - 12px);
 	min-width: 200px;
 	text-align: left;
+	transition: transform 0.2s ease;
 }
 
 .application-card.pending {
@@ -123,7 +124,3 @@ body {
 .application-card.rejected {
 	border-top: 3px solid #dc3545;
 }
-/*Hover effects for buttons*/
-.btn-accept:hover { background-color: #1e7e34; }
-.btn-reject:hover { background-color: #e0a800; }
-.btn-delete:hover { background-color: #a71d2a; }
