@@ -4,7 +4,7 @@ require_once("settings.php");
 $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
 
 if (!$conn) {
-    die("<p>Database connection failed.</p>");
+	die("<p>Database connection failed.</p>");
 }
 
 $query = "SELECT member_name, project_part, contribution_text, quote_text FROM `members contribution` ORDER BY member_name, project_part";
@@ -82,21 +82,21 @@ $result = mysqli_query($conn, $query);
 			</section>
 			<!-- Member contributions and quotes using a definition list -->
 			<section class="member-definition-list">
-	<h2 style="text-align: center">Member Contributions and Quotes</h2>
-	<dl>
-		<?php
-		if ($result && mysqli_num_rows($result) > 0) {
-			while ($row = mysqli_fetch_assoc($result)) {
-				echo "<dt>" . htmlspecialchars($row['member_name']) . " - " . htmlspecialchars($row['project_part']) . "</dt>";
-				echo "<dd>" . htmlspecialchars($row['contribution_text']) . "</dd>";
-				echo "<dd><strong>Quote:</strong> " . htmlspecialchars($row['quote_text']) . "</dd>";
-			}
-		} else {
-			echo "<dd>No member contributions found.</dd>";
-		}
-		?>
-	</dl>
-</section>
+				<h2 style="text-align: center">Member Contributions and Quotes</h2>
+				<dl>
+					<?php
+					if ($result && mysqli_num_rows($result) > 0) {
+						while ($row = mysqli_fetch_assoc($result)) {
+							echo "<dt>" . htmlspecialchars($row['member_name']) . " - " . htmlspecialchars($row['project_part']) . "</dt>";
+							echo "<dd>" . htmlspecialchars($row['contribution_text']) . "</dd>";
+							echo "<dd><strong>Quote:</strong> " . htmlspecialchars($row['quote_text']) . "</dd>";
+						}
+					} else {
+						echo "<dd>No member contributions found.</dd>";
+					}
+					?>
+				</dl>
+			</section>
 			<!-- Team member flip section -->
 			<section class="member-info">
 				<h2 style="text-align: center">Team Members and Contributions</h2>
@@ -108,8 +108,8 @@ $result = mysqli_query($conn, $query);
 					<div class="flip-card">
 						<div class="flip-card-inner">
 							<div class="flip-card-front">
-								<img src="images/IMG_0005MOSS.JPG" alt="Photo of Moss Whitehall" width="300"
-									height="300" />
+								<img src="images/IMG_0005MOSS.webp" alt="Photo of Moss Whitehall" width="300"
+									height="300" style="transform: rotate(-90deg)" />
 								<h3>Moss Whitehall</h3>
 							</div>
 							<div class="flip-card-back">
@@ -134,8 +134,8 @@ $result = mysqli_query($conn, $query);
 					<div class="flip-card">
 						<div class="flip-card-inner">
 							<div class="flip-card-front">
-								<img src="images/IMG_Kanav0004.JPG" alt="Photo of Kanavpreet Multani" width="300"
-									height="300" />
+								<img src="images/IMG_Kanav0004.webp" alt="Photo of Kanavpreet Multani" width="300"
+									height="300" style="transform: rotate(-90deg)" />
 								<h3>Kanavpreet Multani</h3>
 							</div>
 							<div class="flip-card-back">
@@ -160,8 +160,8 @@ $result = mysqli_query($conn, $query);
 					<div class="flip-card">
 						<div class="flip-card-inner">
 							<div class="flip-card-front">
-								<img src="images/IMG_0002VICHETRA.JPG" alt="Photo of Vichetra Sam An" width="300"
-									height="300" />
+								<img src="images/IMG_0002VICHETRA.webp" alt="Photo of Vichetra Sam An" width="300"
+									height="300" style="transform: rotate(-90deg)" />
 								<h3>Vichetra Sam An</h3>
 							</div>
 							<div class="flip-card-back">
@@ -184,7 +184,8 @@ $result = mysqli_query($conn, $query);
 			<section class="group-photo-section">
 				<h2>Group Photo</h2>
 				<figure class="group-photo">
-					<img src="images/20260527_130641.jpg" alt="Group photo of the FakeShop team" width="420" height="280" />
+					<img src="images/20260527_130641.webp" alt="Group photo of the FakeShop team" width="420"
+						height="280" />
 					<figcaption>Our FakeShop team photo.</figcaption>
 				</figure>
 			</section>
@@ -231,8 +232,8 @@ $result = mysqli_query($conn, $query);
 	include("./includes/footer.inc");
 	?>
 	<?php
-    mysqli_close($conn);
-    ?>
+	mysqli_close($conn);
+	?>
 </body>
 
 </html>
