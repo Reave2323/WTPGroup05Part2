@@ -23,7 +23,6 @@ $result = mysqli_query($conn, $query);
 	<meta name="author" content="Moss, Kanav, Vichetra" />
 	<title>About the Team</title>
 	<link rel="stylesheet" href="./style/style.css" />
-	<link rel="stylesheet" href="./style/about.css" />
 	<!--Adds Font Support For Non-English Characters-->
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
