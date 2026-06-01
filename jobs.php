@@ -83,7 +83,7 @@ $result = mysqli_query($conn, $query);
 				} else if ($row['category'] == 'Front End Development') {
 					$image = './images/FrontEnd.webp" style="transform: rotate(-90deg)"';
 				} else if ($row['category'] == 'Servicing Customers') {
-					$image = './images/customersupportgraphic.webp" style="scale: ;"';
+					$image = './images/customersupportgraphic.webp"class=card-image"';
 				} else {
 					$image = 'DefaultJobImage.webp'; // image for Job categories
 				}
