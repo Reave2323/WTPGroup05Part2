@@ -13,6 +13,7 @@ $password = trim($_POST['password']);
 //Check for empty fields
 if (empty($username) || empty($password)) {
     echo "Please enter both username and password.";
+    echo '<br><button><a href="login.php" style="text-decoration: none;">Go back to login</a></button>';
     exit();
 }
 
