@@ -184,7 +184,7 @@ $result = mysqli_query($conn, $query);
 			<section class="group-photo-section">
 				<h2>Group Photo</h2>
 				<figure class="group-photo">
-					<img src="images/GroupPhoto.png" alt="Group photo of the FakeShop team" width="420" height="280" />
+					<img src="images/20260527_130641.jpg" alt="Group photo of the FakeShop team" width="420" height="280" />
 					<figcaption>Our FakeShop team photo.</figcaption>
 				</figure>
 			</section>
