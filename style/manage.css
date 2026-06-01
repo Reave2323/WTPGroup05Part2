@@ -13,7 +13,6 @@ body {
 	padding: 30px;
 	border-radius: 5px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	
 }
 
 .manager-portal p {
@@ -113,7 +112,7 @@ body {
 	transition: transform 0.2s ease;
 }
 .application-card:hover {
-    transform: scale(1.02);
+	transform: scale(1.02);
 }
 
 .application-card.pending {
@@ -128,4 +127,23 @@ body {
 	border-top: 3px solid #dc3545;
 }
 
-
+.accept:hover {
+	background-color: #28a745;
+	color: #fff;
+	transition: background-color 0.3s ease;
+}
+.reject:hover {
+	background-color: #dc3545;
+	color: #fff;
+	transition: background-color 0.3s ease;
+}
+.delete:hover {
+	background-color: #6c757d;
+	color: #fff;
+	transition: background-color 0.3s ease;
+}
+.pending-button:hover {
+	background-color: #ffc107;
+	color: #fff;
+	transition: background-color 0.3s ease;
+}
