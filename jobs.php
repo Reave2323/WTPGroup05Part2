@@ -79,11 +79,11 @@ $result = mysqli_query($conn, $query);
 			while ($row = mysqli_fetch_assoc($result)) {
 
 				if ($row['category'] == 'Back End Development') {
-					$image = './images/BackendDev.webp';
+					$image = './images/BackendDev.webp"';
 				} else if ($row['category'] == 'Front End Development') {
-					$image = './images/FrontEnd.webp';
+					$image = './images/FrontEnd.webp" style="transform: rotate(-90deg)"';
 				} else if ($row['category'] == 'Servicing Customers') {
-					$image = './images/CustomerSupport.webp';
+					$image = './images/CustomerSupport.webp"';
 				} else {
 					$image = 'DefaultJobImage.webp'; // image for Job categories
 				}
@@ -102,7 +102,7 @@ $result = mysqli_query($conn, $query);
 
 
 				echo ' <div class="card"> 
-								<img src="' . $image . '" alt="' . htmlspecialchars($row['job_name']) . '" width="200" height="200" />
+								<img src="' . $image . ' alt="' . htmlspecialchars($row['job_name']) . '" width="200" height="200" />
 								<div class="card-content">
 									<h3><strong>' . htmlspecialchars($row['job_name']) . '</strong></h3>
 									<h4><strong>Reference Number: ' . $row['reference_number'] . '</strong></h4>
@@ -124,11 +124,11 @@ $result = mysqli_query($conn, $query);
 		$popupinfo = mysqli_query($conn, "SELECT * FROM jobslisting");
 		while ($row = mysqli_fetch_assoc($popupinfo)) {
 			if ($row['category'] == 'Back End Development') {
-				$image = './images/BackendDev.webp';
+				$image = './images/BackendDev.webp"';
 			} else if ($row['category'] == 'Front End Development') {
-				$image = './images/FrontEnd.webp';
+				$image = './images/FrontEnd.webp" style="transform: rotate(-90deg)"';
 			} else if ($row['category'] == 'Servicing Customers') {
-				$image = './images/CustomerSupport.webp';
+				$image = './images/CustomerSupport.webp"';
 			} else {
 				$image = 'images/DefaultJobImage.webp'; // image for Job categories
 			}
@@ -136,7 +136,7 @@ $result = mysqli_query($conn, $query);
 					<div class="popup-card">
 					<a href="#" class="close">&times;</a>
 					<div class="left">
-						<img loading="lazy" src="' . $image . '" alt="' . htmlspecialchars($row['job_name']) . '" width="100%" height="auto" />
+						<img loading="lazy" src="' . $image . ' alt="' . htmlspecialchars($row['job_name']) . '" width="100%" height="auto" />
 					</div>
 					<div class="right">
 						<h3>' . htmlspecialchars($row['job_name']) . '</h3>

@@ -14,7 +14,6 @@ unset($_SESSION["errors"], $_SESSION["old"]);
 	<meta name="keywords" content="shop, buisness, fakeshop, apply, job-listing" />
 	<meta name="author" content="Moss, Kanav, Vichetra" />
 	<title>Apply to FakeShop</title>
-	<link rel="stylesheet" href="./style/apply.css" />
 	<link rel="stylesheet" href="./style/style.css" />
 
 	<style>
@@ -56,7 +55,7 @@ unset($_SESSION["errors"], $_SESSION["old"]);
 	include("./includes/nav.inc");
 	?>
 	<div class="content-area" style="margin-top:5px">
-		<form action="process_eoi.php" method="post" class="apply_form"> 
+		<form action="process_eoi.php" method="post" class="apply_form">
 			<div class="Kbal">
 				<h1 id="JobApplication">
 					<strong>Expression Of Interest Form</strong>
