@@ -9,15 +9,17 @@ if (!$conn) {
 
 $search = "";
 if (isset($_GET['search'])) {
-	$search = mysqli_real_escape_string($conn, $_GET['search']);//quotes and dashes cannot be used to manipulate the query database.
-
+	$search = "%" . $_GET['search'] . "%";
+	$stmt = mysqli_prepare($conn, "SELECT * FROM jobslisting WHERE job_name LIKE ?"); #quotes and dashes cannot be used to manipulate the query database.
+	mysqli_stmt_bind_param($stmt, "s", $search);
+	mysqli_stmt_execute($stmt);
+	$result = mysqli_stmt_get_result($stmt);
+} else {
+	$query = "SELECT * FROM jobslisting";
+	$result = mysqli_query($conn, $query);
 }
 
-$query = "SELECT * FROM jobslisting WHERE job_name LIKE '%$search%'";
-$result = mysqli_query($conn, $query);
-
 ?>
-
 
 
 <!doctype html>
