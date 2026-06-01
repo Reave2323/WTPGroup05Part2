@@ -83,7 +83,7 @@ if (isset($_GET['search'])) {
 				if ($row['category'] == 'Back End Development') {
 					$image = './images/BackendDev.webp"';
 				} else if ($row['category'] == 'Front End Development') {
-					$image = './images/FrontEnd.webp" style="transform: rotate(-90deg)"';
+					$image = './images/FrontEnd.webp" ';
 				} else if ($row['category'] == 'Servicing Customers') {
 					$image = './images/customersupportgraphic.webp"';
 				} else {
