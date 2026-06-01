@@ -123,3 +123,7 @@ body {
 .application-card.rejected {
 	border-top: 3px solid #dc3545;
 }
+/*Hover effects for buttons*/
+.application-card .btn-accept:hover { background-color: #1e7e34; }
+.application-card .btn-reject:hover { background-color: #e0a800; }
+.application-card .btn-delete:hover { background-color: #a71d2a; }
