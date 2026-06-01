@@ -342,15 +342,24 @@ a:hover {
 }
 
 .ready {
-	transform: translateY(200%);
+	transform: none;
+    width: 100%;
+    float: none;
+    margin: 0;
 }
 
 .details {
-	transform: translateY(300%);
+	transform: none;
+    width: 100%;
+    float: none;
+    margin: 0;
 }
 
 .not-found {
-	transform: translateY(800%);
+	transform: none;
+    width: 100%;
+    float: none;
+    margin: 0;
 }
 
 aside {
