@@ -1,5 +1,12 @@
 * {
 	text-align: center;
+	font-family: calibri, sans-serif;
+	box-sizing: border-box;
+}
+body {
+	background-color: #f0f4f8;
+	margin: 0;
+	padding: 0;
 }
 .manager-portal {
 	background-color: #f9f9f9;
