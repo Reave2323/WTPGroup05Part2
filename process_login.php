@@ -24,6 +24,7 @@ mysqli_stmt_execute($stmt);
 $result = mysqli_stmt_get_result($stmt);
 $user = mysqli_fetch_assoc($result);
 
+
 //Checks password hash against the database
 if ($user && password_verify($password, $user['Password'])) {
     session_regenerate_id(true); //Generates a session ID to prevent session hijacking

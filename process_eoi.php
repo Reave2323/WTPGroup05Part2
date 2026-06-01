@@ -5,6 +5,30 @@ $conn = mysqli_connect($host, $user, $pwd, $sql_db);
 if (!$conn) {
     die("Connection failed:" . mysqli_connect_error());
 }
+$sql = "CREATE TABLE IF NOT EXISTS `eoi` (
+  `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `reference_number` int(5) NOT NULL,
+  `fname` varchar(50) NOT NULL,
+  `lname` varchar(50) NOT NULL,
+  `dob` varchar(10) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `phone` varchar(12) NOT NULL,
+  `gender` varchar(6) NOT NULL,
+  `addr` text NOT NULL,
+  `country_state` varchar(15) NOT NULL,
+  `skills` varchar(100) NOT NULL,
+  `other_skills` text DEFAULT NULL,
+  `post_date` timestamp NULL DEFAULT current_timestamp(),
+  `Status` int(11) NOT NULL DEFAULT 1,
+  PRIMARY KEY (`id`)
+)";
+
+if (!mysqli_query($conn, $sql)) {
+    die("Error creating table: " . mysqli_error($conn));
+}
+
+mysqli_query($conn, $sql);
+
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     header("Location: apply.php");
