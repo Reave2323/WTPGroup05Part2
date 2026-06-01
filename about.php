@@ -230,6 +230,9 @@ $result = mysqli_query($conn, $query);
 	<?php
 	include("./includes/footer.inc");
 	?>
+	<?php
+    mysqli_close($conn);
+    ?>
 </body>
 
 </html>
