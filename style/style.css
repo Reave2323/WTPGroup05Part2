@@ -375,6 +375,13 @@ aside {
 	clear: right;
 }
 
+.aside-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    float: right;
+    width: 20%;
+}
 /* HOME STYLING */
 
 .hero {
