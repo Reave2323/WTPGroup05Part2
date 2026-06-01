@@ -177,9 +177,9 @@ while ($row = mysqli_fetch_assoc($applications)) {
                             <p class="status-pending">Status: Pending</p>
                             <form method="post" action="manage.php">
                                 <input type="hidden" name="edit-id" value="<?php echo $row['id']; ?>">
-                                <button type="submit" name="action" value="accept">Accept</button>
-                                <button type="submit" name="action" value="reject">Reject</button>
-                                <button type="submit" name="action" value="delete">Delete</button>
+                                <button type="submit" name="action" value="accept" class="accept">Accept</button>
+                                <button type="submit" name="action" value="reject" class="reject">Reject</button>
+                                <button type="submit" name="action" value="delete" class="delete">Delete</button>
                             </form>
                         </div>
                     <?php endforeach; ?>
@@ -209,9 +209,9 @@ while ($row = mysqli_fetch_assoc($applications)) {
                             <p class="status-accepted">Status: Accepted</p>
                             <form method="post" action="manage.php">
                                 <input type="hidden" name="edit-id" value="<?php echo $row['id']; ?>">
-                                <button type="submit" name="action" value="pending">Pending</button>
-                                <button type="submit" name="action" value="reject">Reject</button>
-                                <button type="submit" name="action" value="delete">Delete</button>
+                                <button type="submit" name="action" value="pending" class="pending-button">Pending</button>
+                                <button type="submit" name="action" value="reject" class="reject">Reject</button>
+                                <button type="submit" name="action" value="delete" class="delete">Delete</button>
                             </form>
                         </div>
                     <?php endforeach; ?>
@@ -235,9 +235,9 @@ while ($row = mysqli_fetch_assoc($applications)) {
                             <p class="status-rejected">Status: Rejected</p>
                             <form method="post" action="manage.php">
                                 <input type="hidden" name="edit-id" value="<?php echo $row['id']; ?>">
-                                <button type="submit" name="action" value="accept">Accept</button>
-                                <button type="submit" name="action" value="pending">Pending</button>
-                                <button type="submit" name="action" value="delete">Delete</button>
+                                <button type="submit" name="action" value="accept" class="accept">Accept</button>
+                                <button type="submit" name="action" value="pending" class="pending-button">Pending</button>
+                                <button type="submit" name="action" value="delete" class="delete">Delete</button>
                             </form>
                         </div>
                     <?php endforeach; ?>
