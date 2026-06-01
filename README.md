@@ -1,13 +1,5 @@
 # WebTechProjectGroup5
 
-**Google Doc**:
-
-https://docs.google.com/document/d/11kkueJoga6Uw7vu0FYax8cm3FyIoPYG2XwRD-VKTyjw/edit?usp=sharing
-
-**Jira Board**:
-
-https://wtp-group5-wed-230.atlassian.net?continue=https%3A%2F%2Fwtp-group5-wed-230.atlassian.net%2Fwelcome%2Fsoftware&atlOrigin=eyJpIjoiNDI3YzZkN2EyZjc2NDQ0MzlkNGY2MWRkNzIzZGU1MWYiLCJwIjoiaiJ9
-
 **Group Members**:
 Kanav
 Moss
@@ -20,12 +12,12 @@ Task 2: Vichetra DONE
 
 Task 3: Moss DONE
 
-Task 4: Moss
+Task 4: Moss DONE
 
-Task 5: Moss Vichetra In Progress
+Task 5: Moss Vichetra DONE
 
-Task 6: Everyone
+Task 6: Everyone DONE
 
-Task 7: Kanav
+Task 7: Kanav DONE
 
 &copy;Swinburne University of Technology

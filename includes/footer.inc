@@ -21,15 +21,10 @@
 		<a href="https://www.swinburne.edu.au/"
 			>| &copy;Swinburne University of Technology |
 		</a>
-		<a href="./index.php">&copy;FakeShop</a>
-		<a
-			href="https://wtp-group5-wed-230.atlassian.net?continue=https%3A%2F%2Fwtp-group5-wed-230.atlassian.net%2Fwelcome%2Fsoftware&atlOrigin=eyJpIjoiNDI3YzZkN2EyZjc2NDQ0MzlkNGY2MWRkNzIzZGU1MWYiLCJwIjoiaiJ9"
-			>Jira Board |
-		</a>
-		<a href="https://github.com/Reave2323/WebTechProjectGroup5"
+		<a href="./index.php">&copy;FakeShop |</a>
+		<a href="hhttps://github.com/Reave2323/WTPGroup05Part2"
 			>Github Repository |
 		</a>
-		<a href="https://reave2323.github.io/WebTechProjectGroup5/">Live Site | </a>
 		<a href="mailto:info@fakeshop.com">Need to Contact Us?</a>
 	</footer>
 </div>
