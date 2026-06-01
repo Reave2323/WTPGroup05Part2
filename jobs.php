@@ -83,7 +83,7 @@ $result = mysqli_query($conn, $query);
 				} else if ($row['category'] == 'Front End Development') {
 					$image = './images/FrontEnd.webp" style="transform: rotate(-90deg)"';
 				} else if ($row['category'] == 'Servicing Customers') {
-					$image = './images/CustomerSupport(2).webp" style="scale: 0.5;"';
+					$image = './images/customersupportgraphic.webp" style="scale: ;"';
 				} else {
 					$image = 'DefaultJobImage.webp'; // image for Job categories
 				}
@@ -128,7 +128,7 @@ $result = mysqli_query($conn, $query);
 			} else if ($row['category'] == 'Front End Development') {
 				$image = './images/FrontEnd.webp" style="transform: rotate(-90deg)"';
 			} else if ($row['category'] == 'Servicing Customers') {
-				$image = './images/CustomerSupport(2).webp"';
+				$image = './images/customersupportgraphic.webp';
 			} else {
 				$image = 'images/DefaultJobImage.webp'; // image for Job categories
 			}
