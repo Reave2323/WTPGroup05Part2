@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 27, 2026 at 03:36 AM
+-- Generation Time: Jun 01, 2026 at 09:43 AM
 -- Server version: 12.2.2-MariaDB
 -- PHP Version: 8.5.6
 
@@ -26,10 +26,10 @@ USE `jobs_database`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Eoi`
+-- Table structure for table `eoi`
 --
 
-CREATE TABLE IF NOT EXISTS `Eoi` (
+CREATE TABLE IF NOT EXISTS `eoi` (
   `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT,
   `reference_number` int(5) NOT NULL,
   `fname` varchar(50) NOT NULL,
@@ -48,17 +48,22 @@ CREATE TABLE IF NOT EXISTS `Eoi` (
 ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `Eoi`
+-- Truncate table before insert `eoi`
 --
 
-INSERT INTO `Eoi` (`id`, `reference_number`, `fname`, `lname`, `dob`, `email`, `phone`, `gender`, `addr`, `country_state`, `skills`, `other_skills`, `post_date`, `Status`) VALUES
-(11, 30027, 'Moss', 'Whitehal', '11/07/2007', '106507235@student.swin.edu.au', '0480189325', 'Male', '9 wakup street, Hawthorne, 3005', 'VIC', 'HTML, JIRA, CSS, Javascript, PHP, MySQL, Communication, ProblemSolvingSkills', 'TEST MANAGER PORTAL DISPLAY', '2026-05-26 10:31:17', 1),
-(12, 30027, 'Quandail', 'Dingle', '28/01/1923', 'someone@gmail.com', '0482321459', 'Male', '1 Dingell Street, Quandaltown, 1002', 'ACT', 'HTML, JIRA, CSS, Javascript, PHP, MySQL, Communication, ProblemSolvingSkills', 'I can dingelberry', '2026-05-26 12:23:24', 1),
-(13, 30027, 'Quandail', 'Dingle', '28/01/1923', 'someone@gmail.com', '0482321459', 'Male', '1 Dingell Street, Quandaltown, 1002', 'ACT', 'HTML, JIRA, CSS, Javascript, PHP, MySQL, Communication, ProblemSolvingSkills', 'I can dingelberry\r\nWith Phone Number Validation', '2026-05-26 12:59:21', 1),
-(14, 30027, 'Quandail', 'Dingle', '28/01/1927', 'someone@gmail.com', '048232145', 'Male', '1 Dingell Street, Quandaltown, 1002', 'ACT', 'HTML, JIRA, CSS, Javascript, PHP, MySQL, Communication, ProblemSolvingSkills', 'I can dingelberry\r\nWith Phone Number Validation', '2026-05-26 13:08:02', 1),
-(15, 30027, 'Billy', 'Bob', '10/05/2004', 'sillybilly@gmail.com', '0930250312', 'Male', '10 Wakefield Street, Middleman, 2003', 'NSW', 'HTML, JIRA, CSS, Javascript, PHP, MySQL, Communication, ProblemSolvingSkills', 'I\'m a silly billy', '2026-05-26 14:25:53', 1),
-(16, 30027, 'Moss', 'Whitehal', '11/07/2007', '106507235@student.swin.edu.au', '0480189325', 'Male', '9 wakup street, Hawthorne, 3005', 'VIC', 'HTML, JIRA, CSS, Javascript, PHP, MySQL, Communication, ProblemSolvingSkills', 'Checking new database phone length', '2026-05-26 14:27:47', 1),
-(17, 10015, 'Kyle', 'Forest', '28/02/1980', 'kyleforest@hotmail.com', '0441376248', 'Male', '7 Williams Street, Hawthorne, 3059', 'VIC', 'HTML, CSS, Javascript, ProblemSolvingSkills', '', '2026-05-26 15:45:44', 1);
+TRUNCATE TABLE `eoi`;
+--
+-- Dumping data for table `eoi`
+--
+
+INSERT INTO `eoi` (`id`, `reference_number`, `fname`, `lname`, `dob`, `email`, `phone`, `gender`, `addr`, `country_state`, `skills`, `other_skills`, `post_date`, `Status`) VALUES
+(11, 30027, 'Moss', 'Whitehal', '11/07/2007', '106507235@student.swin.edu.au', '0480189325', 'Male', '9 wakup street, Hawthorne, 3005', 'VIC', 'HTML, JIRA, CSS, Javascript, PHP, MySQL, Communication, ProblemSolvingSkills', 'TEST MANAGER PORTAL DISPLAY', '2026-05-26 00:31:17', 1),
+(12, 30027, 'Quandail', 'Dingle', '28/01/1923', 'someone@gmail.com', '0482321459', 'Male', '1 Dingell Street, Quandaltown, 1002', 'ACT', 'HTML, JIRA, CSS, Javascript, PHP, MySQL, Communication, ProblemSolvingSkills', 'I can dingelberry', '2026-05-26 02:23:24', 1),
+(13, 30027, 'Quandail', 'Dingle', '28/01/1923', 'someone@gmail.com', '0482321459', 'Male', '1 Dingell Street, Quandaltown, 1002', 'ACT', 'HTML, JIRA, CSS, Javascript, PHP, MySQL, Communication, ProblemSolvingSkills', 'I can dingelberry\r\nWith Phone Number Validation', '2026-05-26 02:59:21', 1),
+(14, 30027, 'Quandail', 'Dingle', '28/01/1927', 'someone@gmail.com', '048232145', 'Male', '1 Dingell Street, Quandaltown, 1002', 'ACT', 'HTML, JIRA, CSS, Javascript, PHP, MySQL, Communication, ProblemSolvingSkills', 'I can dingelberry\r\nWith Phone Number Validation', '2026-05-26 03:08:02', 1),
+(15, 30027, 'Billy', 'Bob', '10/05/2004', 'sillybilly@gmail.com', '0930250312', 'Male', '10 Wakefield Street, Middleman, 2003', 'NSW', 'HTML, JIRA, CSS, Javascript, PHP, MySQL, Communication, ProblemSolvingSkills', 'I\'m a silly billy', '2026-05-26 04:25:53', 1),
+(16, 30027, 'Moss', 'Whitehal', '11/07/2007', '106507235@student.swin.edu.au', '0480189325', 'Male', '9 wakup street, Hawthorne, 3005', 'VIC', 'HTML, JIRA, CSS, Javascript, PHP, MySQL, Communication, ProblemSolvingSkills', 'Checking new database phone length', '2026-05-26 04:27:47', 1),
+(17, 10015, 'Kyle', 'Forest', '28/02/1980', 'kyleforest@hotmail.com', '0441376248', 'Male', '7 Williams Street, Hawthorne, 3059', 'VIC', 'HTML, CSS, Javascript, ProblemSolvingSkills', '', '2026-05-26 05:45:44', 1);
 
 -- --------------------------------------------------------
 
@@ -81,6 +86,11 @@ CREATE TABLE IF NOT EXISTS `jobslisting` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Truncate table before insert `jobslisting`
+--
+
+TRUNCATE TABLE `jobslisting`;
 --
 -- Dumping data for table `jobslisting`
 --
@@ -110,6 +120,11 @@ CREATE TABLE IF NOT EXISTS `members contribution` (
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Truncate table before insert `members contribution`
+--
+
+TRUNCATE TABLE `members contribution`;
+--
 -- Dumping data for table `members contribution`
 --
 
@@ -136,6 +151,11 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`User ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Truncate table before insert `users`
+--
+
+TRUNCATE TABLE `users`;
 --
 -- Dumping data for table `users`
 --
